@@ -1,11 +1,10 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import SortingVisualizer from "./visualizers/SortingVisualizer";
+import SortingVisualizer from "./visualizers/array/SortingVisualizer";
 import GraphVisualizer from "./visualizers/GraphVisualizer";
 import DPVisualizer from "./visualizers/DPVisualizer";
 import Stack from "./dataStructure/stackStructure/Stack";
 import Queue from "./dataStructure/queueStructure/Queue";
-import ArrayStructure from "./dataStructure/arrayStructure/Array";
 import Heap from "./dataStructure/heapStructure/Heap";
 import AVLTree from "./dataStructure/treeStructure/AVLTree";
 import BinaryTree from "./dataStructure/treeStructure/BinaryTree";
@@ -14,6 +13,7 @@ import HomePage from "./components/pages/Home.jsx";
 import "./App.css";
 import Contact from "./components/pages/Contact.jsx";
 import Dashboard from "./components/pages/Dashboard";
+import ArrayVisualizer from "./visualizers/array/ArrayVisualizer";
 
 const App = () => {
   return (
@@ -27,7 +27,7 @@ const App = () => {
           <Route path="/dp" element={<DPVisualizer />} />
           <Route path="/stack" element={<Stack />} />
           <Route path="/queue" element={<Queue />} />
-          <Route path="/array" element={<ArrayStructure />} />
+          <Route path="/array" element={<ArrayVisualizer />} />
           <Route path="/heap" element={<Heap />} />
           <Route path="/avltree" element={<AVLTree />} />
           <Route path="/binarytree" element={<BinaryTree />} />
