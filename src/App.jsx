@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import SortingVisualizer from "./visualizers/array/SortingVisualizer";
 import GraphVisualizer from "./visualizers/GraphVisualizer";
 import DPVisualizer from "./visualizers/DPVisualizer";
-import Stack from "./dataStructure/stackStructure/Stack";
 import Queue from "./dataStructure/queueStructure/Queue";
 import Heap from "./dataStructure/heapStructure/Heap";
 import AVLTree from "./dataStructure/treeStructure/AVLTree";
@@ -14,6 +13,7 @@ import "./App.css";
 import Contact from "./components/pages/Contact.jsx";
 import Dashboard from "./components/pages/Dashboard";
 import ArrayVisualizer from "./visualizers/array/ArrayVisualizer";
+import StackVisualizer from "./visualizers/stack/StackVisualizer";
 
 const App = () => {
   return (
@@ -25,7 +25,7 @@ const App = () => {
           <Route path="/sorting" element={<SortingVisualizer />} />
           <Route path="/graphs" element={<GraphVisualizer />} />
           <Route path="/dp" element={<DPVisualizer />} />
-          <Route path="/stack" element={<Stack />} />
+          <Route path="/stack" element={<StackVisualizer />} />
           <Route path="/queue" element={<Queue />} />
           <Route path="/array" element={<ArrayVisualizer />} />
           <Route path="/heap" element={<Heap />} />

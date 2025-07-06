@@ -32,7 +32,7 @@ const Sidebar = () => {
       initial={{ x: -40, opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
       transition={{ duration: 0.7 }}
-      className="h-screen w-[250px] px-6 py-8 flex flex-col gap-8 text-white bg-[#0d0d15] border-r border-white/10 shadow-lg"
+      className="min-h-screen w-[250px] px-6 py-8 flex flex-col gap-8 text-white bg-[#0d0d15] border-r border-white/10 shadow-lg"
     >
       <div className="text-3xl font-extrabold text-center bg-gradient-to-r from-[#8b3dff] to-[#e84aff] text-transparent bg-clip-text">
         ThinkFlow
