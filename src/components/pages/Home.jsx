@@ -81,7 +81,7 @@ const HomePage = () => {
       <footer className="text-center py-8 text-gray-500 text-sm border-t border-white/10">
         Made with 💜 by Saurabh |{" "}
         <a
-          href="https://github.com/saurabh-develop/ThinkFlow"
+          href="https://github.com/saurabh-develop"
           target="_blank"
           rel="noopener noreferrer"
           className="underline"

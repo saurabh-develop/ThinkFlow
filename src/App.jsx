@@ -13,6 +13,7 @@ import Navbar from "./components/layout/NavBar.jsx";
 import HomePage from "./components/pages/Home.jsx";
 import "./App.css";
 import Contact from "./components/pages/Contact.jsx";
+import Dashboard from "./components/pages/Dashboard";
 
 const App = () => {
   return (
@@ -30,8 +31,8 @@ const App = () => {
           <Route path="/heap" element={<Heap />} />
           <Route path="/avltree" element={<AVLTree />} />
           <Route path="/binarytree" element={<BinaryTree />} />
-
           <Route path="/contact" element={<Contact />} />
+          <Route path="/dashboard" element={<Dashboard />} />
         </Routes>
       </div>
     </Router>
