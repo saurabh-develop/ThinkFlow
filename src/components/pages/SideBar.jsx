@@ -21,6 +21,7 @@ const Sidebar = () => {
       title: "Algorithms",
       links: [
         { label: "Bubble Sort", path: "/bubbleSort" },
+        { label: "Insertion Sort", path: "/insertionSort" },
         { label: "Graph", path: "/graphs" },
         { label: "DP", path: "/dp" },
       ],

@@ -9,7 +9,7 @@ const BubbleSortVisualizer = () => {
   const [array, setArray] = useState([]);
   const [steps, setSteps] = useState([]);
   const [currentStep, setCurrentStep] = useState(0);
-  const [speed, setSpeed] = useState(500 - 50);
+  const [speed, setSpeed] = useState(350);
   const [isSorting, setIsSorting] = useState(false);
   const [activeTab, setActiveTab] = useState("visualization");
   const timeoutRef = useRef(null);
@@ -21,7 +21,7 @@ const BubbleSortVisualizer = () => {
   }, []);
 
   const randomizeArray = () => {
-    const newArr = Array.from({ length: 30 }, () =>
+    const newArr = Array.from({ length: 15 }, () =>
       Math.floor(Math.random() * 100)
     );
     setArray(newArr);

@@ -68,3 +68,50 @@ export const bubbleSortSteps = (arr) => {
 
   return steps;
 };
+
+export const insertionSortSteps = (arr) => {
+  const steps = [];
+
+  for (let i = 1; i < arr.length; i++) {
+    let key = arr[i];
+    let j = i - 1;
+
+    steps.push({
+      array: [...arr],
+      comparing: [i],
+      sortedIndices: [],
+      line: 1,
+    });
+
+    while (j >= 0 && arr[j] > key) {
+      arr[j + 1] = arr[j];
+
+      steps.push({
+        array: [...arr],
+        comparing: [j, j + 1],
+        sortedIndices: [],
+        line: 2,
+      });
+
+      j--;
+    }
+
+    arr[j + 1] = key;
+
+    steps.push({
+      array: [...arr],
+      comparing: [j + 1],
+      sortedIndices: [],
+      line: 3,
+    });
+  }
+
+  steps.push({
+    array: [...arr],
+    comparing: [],
+    sortedIndices: Array.from({ length: arr.length }, (_, i) => i),
+    line: 0,
+  });
+
+  return steps;
+};

@@ -15,6 +15,7 @@ import AVLVisualizer from "./visualizers/avl/AVLVisualizer";
 import BinaryTreeVisualizer from "./visualizers/binaryTree/BinaryTreeVisualizer";
 import LinkedListVisualizer from "./visualizers/linkedList/LinkedListVisualizer";
 import BubbleSortVisualizer from "./visualizers/bubbleSort/BubbleSortVisualiser";
+import InsertionSortVisualizer from "./visualizers/insertionSort/InsertionSortVisualizer";
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/bubbleSort" element={<BubbleSortVisualizer />} />
+          <Route path="/insertionSort" element={<InsertionSortVisualizer />} />
           {/* <Route path="/graphs" element={<GraphVisualizer />} /> */}
           {/* <Route path="/dp" element={<DPVisualizer />} /> */}
           <Route path="/stack" element={<StackVisualizer />} />
