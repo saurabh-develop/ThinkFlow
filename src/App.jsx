@@ -12,6 +12,7 @@ import ArrayVisualizer from "./visualizers/array/ArrayVisualizer";
 import StackVisualizer from "./visualizers/stack/StackVisualizer";
 import QueueVisualizer from "./visualizers/queue/QueueVisualizer";
 import HeapVisualizer from "./visualizers/heap/HeapVisualizer";
+import AVLVisualizer from "./visualizers/avl/AVLVisualizer";
 
 const App = () => {
   return (
@@ -27,8 +28,8 @@ const App = () => {
           <Route path="/queue" element={<QueueVisualizer />} />
           <Route path="/array" element={<ArrayVisualizer />} />
           <Route path="/heap" element={<HeapVisualizer />} />
-          {/* <Route path="/avltree" element={<AVLTree />} />
-          <Route path="/binarytree" element={<BinaryTree />} /> */}
+          <Route path="/avltree" element={<AVLVisualizer />} />
+          {/* <Route path="/binarytree" element={<BinaryTree />} /> */}
           <Route path="/contact" element={<Contact />} />
           <Route path="/dashboard" element={<Dashboard />} />
         </Routes>

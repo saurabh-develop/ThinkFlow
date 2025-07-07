@@ -15,7 +15,7 @@ const HomePage = () => {
     {
       title: "Data Structures",
       desc: "Learn how arrays, stacks, queues, trees, and heaps work internally.",
-      path: "/stack",
+      path: "/array",
     },
     {
       title: "Graph & DP",
