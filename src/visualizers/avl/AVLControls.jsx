@@ -37,13 +37,13 @@ const AVLControls = ({
       />
       <button
         onClick={handleInsert}
-        className="px-4 py-2 rounded-lg bg-green-600 hover:bg-green-700 text-white font-semibold"
+        className="px-4 py-2 rounded-lg bg-purple-600 hover:bg-purple-700 text-white font-semibold"
       >
         Insert
       </button>
       <button
         onClick={handleReset}
-        className="px-4 py-2 rounded-lg bg-gray-700 hover:bg-gray-600 text-white font-semibold"
+        className="px-4 py-2 rounded-lg bg-red-600 hover:bg-red-700 text-white font-semibold"
       >
         Reset
       </button>

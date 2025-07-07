@@ -133,6 +133,7 @@ const BinaryTreeFlowVisualizer = () => {
     if (type === "inorder") result = tree.traverseInOrder();
     if (type === "preorder") result = tree.traversePreOrder();
     if (type === "postorder") result = tree.traversePostOrder();
+    if (type === "levelorder") result = tree.levelOrderTraversal();
 
     setTraversalType(type);
     setTraversalHistory(result);
@@ -192,15 +193,17 @@ const BinaryTreeFlowVisualizer = () => {
             />
 
             <div className="flex justify-center gap-4 my-4">
-              {["inorder", "preorder", "postorder"].map((type) => (
-                <button
-                  key={type}
-                  onClick={() => handleTraversal(type)}
-                  className="px-4 py-2 rounded bg-white/10 hover:bg-white/20 capitalize"
-                >
-                  {type}
-                </button>
-              ))}
+              {["inorder", "preorder", "postorder", "levelorder"].map(
+                (type) => (
+                  <button
+                    key={type}
+                    onClick={() => handleTraversal(type)}
+                    className="px-4 py-2 rounded bg-white/10 hover:bg-white/20 capitalize"
+                  >
+                    {type}
+                  </button>
+                )
+              )}
             </div>
 
             <div className="text-center mb-4">
