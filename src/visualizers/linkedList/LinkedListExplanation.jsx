@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
+import ExplanationSection from "../ExplanationSection.jsx";
 
 const codeSnippets = {
   javascript: `// Singly Linked List in JavaScript
@@ -43,6 +44,7 @@ class LinkedList {
     }
   }
 }`,
+
   cpp: `// Singly Linked List in C++
 #include <iostream>
 using namespace std;
@@ -90,6 +92,7 @@ public:
     }
   }
 };`,
+
   java: `// Singly Linked List in Java
 class Node {
   int value;
@@ -134,87 +137,21 @@ class LinkedList {
 }`,
 };
 
-const CopyButton = ({ text }) => {
-  const [copied, setCopied] = useState(false);
-  const handleCopy = async () => {
-    await navigator.clipboard.writeText(text);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  };
-  return (
-    <button
-      onClick={handleCopy}
-      className="absolute top-2 right-2 text-xs px-2 py-1 rounded bg-purple-700 hover:bg-purple-600 text-white transition"
-    >
-      {copied ? "Copied!" : "Copy"}
-    </button>
-  );
-};
-
 const LinkedListExplanation = () => {
-  const [lang, setLang] = useState("javascript");
-
   return (
-    <div className="mt-16 w-full max-w-4xl mx-auto space-y-8">
-      {/* Explanation */}
-      <div className="space-y-4 text-left">
-        <h2 className="text-2xl font-semibold bg-gradient-to-r from-purple-400 to-pink-500 text-transparent bg-clip-text">
-          🌱 What is a Linked List?
-        </h2>
-        <p className="text-purple-200 text-sm leading-relaxed">
-          A <span className="text-white font-semibold">Linked List</span> is a
-          linear data structure where elements are stored in nodes, each
-          pointing to the next node in sequence. It allows dynamic memory
-          allocation and efficient insertions or deletions at the beginning or
-          middle.
-        </p>
-        <p className="text-purple-200 text-sm leading-relaxed">
-          Unlike arrays, linked lists do not require contiguous memory and can
-          grow or shrink at runtime.
-        </p>
-
-        <div className="border border-white/10 bg-white/5 backdrop-blur rounded-xl p-4 shadow">
-          <h3 className="text-white font-semibold mb-2">
-            💡 Real-World Applications:
-          </h3>
-          <ul className="list-disc list-inside text-sm text-purple-200 space-y-1">
-            <li>Browser history (forward/backward navigation)</li>
-            <li>Undo/redo operations in editors</li>
-            <li>Memory management in OS (free lists, allocators)</li>
-          </ul>
-        </div>
-      </div>
-
-      {/* Code Section */}
-      <div className="border border-white/10 bg-white/5 backdrop-blur rounded-xl p-4 shadow space-y-4">
-        <h3 className="text-white text-xl font-semibold bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text">
-          🧠 Linked List Code Implementation
-        </h3>
-
-        {/* Language Tabs */}
-        <div className="flex space-x-2 text-sm font-semibold">
-          {["javascript", "cpp", "java"].map((l) => (
-            <button
-              key={l}
-              onClick={() => setLang(l)}
-              className={`px-3 py-1 rounded ${
-                lang === l
-                  ? "bg-purple-600 text-white"
-                  : "bg-white/10 text-purple-300 hover:bg-white/20"
-              }`}
-            >
-              {l === "javascript" ? "JavaScript" : l.toUpperCase()}
-            </button>
-          ))}
-        </div>
-
-        {/* Code Block */}
-        <div className="relative bg-black/30 p-4 rounded-lg text-xs text-purple-200 shadow-inner whitespace-pre-wrap overflow-x-auto">
-          <CopyButton text={codeSnippets[lang]} />
-          <pre>{codeSnippets[lang]}</pre>
-        </div>
-      </div>
-    </div>
+    <ExplanationSection
+      title="🌱 What is a Linked List?"
+      description={[
+        "A Linked List is a linear data structure where elements are stored in nodes, each pointing to the next node in sequence.",
+        "It allows dynamic memory allocation and efficient insertions or deletions at the beginning or middle. Unlike arrays, it does not require contiguous memory.",
+      ]}
+      applications={[
+        "Browser history (forward/backward navigation)",
+        "Undo/redo operations in editors",
+        "Memory management in OS (free lists, allocators)",
+      ]}
+      codeSnippets={codeSnippets}
+    />
   );
 };
 

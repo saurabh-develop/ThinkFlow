@@ -1,6 +1,7 @@
-import { useState } from "react";
+import React from "react";
+import ExplanationSection from "../ExplanationSection.jsx";
 
-const codeSnippets = {
+const stackCodeSnippets = {
   javascript: `// JavaScript Stack Example
 let stack = [];
 
@@ -41,56 +42,31 @@ public class Main {
 }`,
 };
 
-const CopyButton = ({ text }) => {
-  const [copied, setCopied] = useState(false);
-  const handleCopy = async () => {
-    await navigator.clipboard.writeText(text);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  };
+const stackDescription = [
+  <>
+    A <span className="text-white font-semibold">Stack</span> is a linear data
+    structure that follows the{" "}
+    <span className="text-white font-semibold">LIFO</span> (Last-In, First-Out)
+    principle. The last element added is the first one to be removed.
+  </>,
+  `Stacks are widely used for function call management, undo operations, and parsing expressions.`,
+];
+
+const stackApplications = [
+  "Backtracking algorithms (DFS, maze solving)",
+  "Undo/Redo in text editors",
+  "Function call stack in programming",
+];
+
+const StackExplanation = () => {
   return (
-    <button
-      onClick={handleCopy}
-      className="absolute top-2 right-2 text-xs px-2 py-1 rounded bg-purple-700 hover:bg-purple-600 text-white transition"
-    >
-      {copied ? "Copied!" : "Copy"}
-    </button>
+    <ExplanationSection
+      title="🧱 What is a Stack?"
+      description={stackDescription}
+      applications={stackApplications}
+      codeSnippets={stackCodeSnippets}
+    />
   );
 };
 
-const CodeImplementation = () => {
-  const [lang, setLang] = useState("javascript");
-
-  return (
-    <div className="border border-white/10 bg-white/5 backdrop-blur rounded-xl p-4 shadow space-y-4 mt-10">
-      <h3 className="text-white text-xl font-semibold bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text">
-        🔧 Stack Code Implementation
-      </h3>
-
-      {/* Tabs */}
-      <div className="flex space-x-2 text-sm font-semibold">
-        {["javascript", "cpp", "java"].map((l) => (
-          <button
-            key={l}
-            onClick={() => setLang(l)}
-            className={`px-3 py-1 rounded ${
-              lang === l
-                ? "bg-purple-600 text-white"
-                : "bg-white/10 text-purple-300 hover:bg-white/20"
-            }`}
-          >
-            {l === "javascript" ? "JavaScript" : l.toUpperCase()}
-          </button>
-        ))}
-      </div>
-
-      {/* Code Block */}
-      <div className="relative bg-black/30 p-4 rounded-lg text-xs text-purple-200 shadow-inner whitespace-pre-wrap overflow-x-auto">
-        <CopyButton text={codeSnippets[lang]} />
-        <pre>{codeSnippets[lang]}</pre>
-      </div>
-    </div>
-  );
-};
-
-export default CodeImplementation;
+export default StackExplanation;
