@@ -20,7 +20,7 @@ const Sidebar = () => {
     {
       title: "Algorithms",
       links: [
-        { label: "Sorting", path: "/sorting" },
+        { label: "Bubble Sort", path: "/bubbleSort" },
         { label: "Graph", path: "/graphs" },
         { label: "DP", path: "/dp" },
       ],

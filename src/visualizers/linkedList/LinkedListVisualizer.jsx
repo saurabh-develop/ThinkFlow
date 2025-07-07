@@ -189,6 +189,72 @@ const LinkedListVisualizer = () => {
                 })}
               </div>
             </div>
+            <div className="p-4 rounded-2xl bg-[#1e1e2f]/60 backdrop-blur-md text-white shadow-lg mt-10">
+              <h2 className="text-2xl font-bold text-center text-purple-400 mb-4">
+                ⏱️ Time Complexity
+              </h2>
+              <div className="overflow-x-auto">
+                <table className="w-full text-sm text-left border-collapse">
+                  <thead>
+                    <tr className="text-purple-300 border-b border-purple-600">
+                      <th className="py-2 px-4">Operation</th>
+                      <th className="py-2 px-4">Singly</th>
+                      <th className="py-2 px-4">Doubly</th>
+                      <th className="py-2 px-4">Circular</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {[
+                      {
+                        op: "Access (by index)",
+                        s: "O(n)",
+                        d: "O(n)",
+                        c: "O(n)",
+                      },
+                      { op: "Search", s: "O(n)", d: "O(n)", c: "O(n)" },
+                      {
+                        op: "Insert at Head",
+                        s: "O(1)",
+                        d: "O(1)",
+                        c: "O(1)",
+                      },
+                      {
+                        op: "Insert at Tail",
+                        s: "O(n)",
+                        d: "O(1)",
+                        c: "O(1)",
+                      },
+                      {
+                        op: "Insert at Index",
+                        s: "O(n)",
+                        d: "O(n)",
+                        c: "O(n)",
+                      },
+                      { op: "Delete Head", s: "O(1)", d: "O(1)", c: "O(1)" },
+                      { op: "Delete Tail", s: "O(n)", d: "O(1)", c: "O(n)" },
+                      {
+                        op: "Delete by Value",
+                        s: "O(n)",
+                        d: "O(n)",
+                        c: "O(n)",
+                      },
+                    ].map((row, i) => (
+                      <tr
+                        key={i}
+                        className={
+                          i % 2 === 0 ? "bg-[#2a2a40]/50" : "bg-[#2a2a40]/30"
+                        }
+                      >
+                        <td className="py-2 px-4">{row.op}</td>
+                        <td className="py-2 px-4 text-purple-200">{row.s}</td>
+                        <td className="py-2 px-4 text-purple-200">{row.d}</td>
+                        <td className="py-2 px-4 text-purple-200">{row.c}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
           </>
         )}
         {activeTab === "explanation" && <LinkedListExplanation />}

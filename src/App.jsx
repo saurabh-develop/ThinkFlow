@@ -1,6 +1,5 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import SortingVisualizer from "./visualizers/array/SortingVisualizer";
 import GraphVisualizer from "./visualizers/GraphVisualizer";
 import DPVisualizer from "./visualizers/DPVisualizer";
 import Navbar from "./components/layout/NavBar.jsx";
@@ -15,6 +14,7 @@ import HeapVisualizer from "./visualizers/heap/HeapVisualizer";
 import AVLVisualizer from "./visualizers/avl/AVLVisualizer";
 import BinaryTreeVisualizer from "./visualizers/binaryTree/BinaryTreeVisualizer";
 import LinkedListVisualizer from "./visualizers/linkedList/LinkedListVisualizer";
+import BubbleSortVisualizer from "./visualizers/bubbleSort/BubbleSortVisualiser";
 
 const App = () => {
   return (
@@ -23,7 +23,7 @@ const App = () => {
         <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          {/* <Route path="/sorting" element={<SortingVisualizer />} /> */}
+          <Route path="/bubbleSort" element={<BubbleSortVisualizer />} />
           {/* <Route path="/graphs" element={<GraphVisualizer />} /> */}
           {/* <Route path="/dp" element={<DPVisualizer />} /> */}
           <Route path="/stack" element={<StackVisualizer />} />
