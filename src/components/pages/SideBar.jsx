@@ -9,6 +9,7 @@ const Sidebar = () => {
       title: "Data Structures",
       links: [
         { label: "Array", path: "/array" },
+        { label: "Linked List", path: "/linkedList" },
         { label: "Stack", path: "/stack" },
         { label: "Queue", path: "/queue" },
         { label: "Heap", path: "/heap" },

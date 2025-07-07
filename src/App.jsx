@@ -14,6 +14,7 @@ import QueueVisualizer from "./visualizers/queue/QueueVisualizer";
 import HeapVisualizer from "./visualizers/heap/HeapVisualizer";
 import AVLVisualizer from "./visualizers/avl/AVLVisualizer";
 import BinaryTreeVisualizer from "./visualizers/binaryTree/BinaryTreeVisualizer";
+import LinkedListVisualizer from "./visualizers/linkedList/LinkedListVisualizer";
 
 const App = () => {
   return (
@@ -31,6 +32,7 @@ const App = () => {
           <Route path="/heap" element={<HeapVisualizer />} />
           <Route path="/avltree" element={<AVLVisualizer />} />
           <Route path="/binarytree" element={<BinaryTreeVisualizer />} />
+          <Route path="/linkedList" element={<LinkedListVisualizer />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/dashboard" element={<Dashboard />} />
         </Routes>
