@@ -24,6 +24,7 @@ const Sidebar = () => {
         { label: "Insertion Sort", path: "/insertionSort" },
         { label: "Selection Sort", path: "/selectionSort" },
         { label: "Merge Sort", path: "/mergeSort" },
+        { label: "Quick Sort", path: "/quickSort" },
         { label: "Graph", path: "/graphs" },
         { label: "DP", path: "/dp" },
       ],
