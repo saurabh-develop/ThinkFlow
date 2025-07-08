@@ -22,6 +22,8 @@ const Sidebar = () => {
       links: [
         { label: "Bubble Sort", path: "/bubbleSort" },
         { label: "Insertion Sort", path: "/insertionSort" },
+        { label: "Selection Sort", path: "/selectionSort" },
+        { label: "Merge Sort", path: "/mergeSort" },
         { label: "Graph", path: "/graphs" },
         { label: "DP", path: "/dp" },
       ],

@@ -115,3 +115,67 @@ export const insertionSortSteps = (arr) => {
 
   return steps;
 };
+
+export const selectionSortSteps = (arr) => {
+  const steps = [];
+  const n = arr.length;
+  const array = [...arr];
+
+  for (let i = 0; i < n - 1; i++) {
+    let minIndex = i;
+
+    steps.push({
+      array: [...array],
+      comparing: [i],
+      sortedIndices: [...Array(i).keys()],
+      line: 1,
+    });
+
+    for (let j = i + 1; j < n; j++) {
+      steps.push({
+        array: [...array],
+        comparing: [j, minIndex],
+        sortedIndices: [...Array(i).keys()],
+        line: 3,
+      });
+
+      if (array[j] < array[minIndex]) {
+        minIndex = j;
+
+        steps.push({
+          array: [...array],
+          comparing: [j, minIndex],
+          sortedIndices: [...Array(i).keys()],
+          line: 4,
+        });
+      }
+    }
+
+    if (minIndex !== i) {
+      [array[i], array[minIndex]] = [array[minIndex], array[i]];
+
+      steps.push({
+        array: [...array],
+        comparing: [i, minIndex],
+        sortedIndices: [...Array(i).keys()],
+        line: 8,
+      });
+    }
+
+    steps.push({
+      array: [...array],
+      comparing: [],
+      sortedIndices: [...Array(i + 1).keys()],
+      line: 9,
+    });
+  }
+
+  steps.push({
+    array: [...array],
+    comparing: [],
+    sortedIndices: [...Array(n).keys()],
+    line: 0,
+  });
+
+  return steps;
+};
