@@ -7,18 +7,20 @@ import HomePage from "./components/pages/Home.jsx";
 import "./App.css";
 import Contact from "./components/pages/Contact.jsx";
 import Dashboard from "./components/pages/Dashboard";
-import ArrayVisualizer from "./visualizers/array/ArrayVisualizer";
 import StackVisualizer from "./visualizers/stack/StackVisualizer";
 import QueueVisualizer from "./visualizers/queue/QueueVisualizer";
 import HeapVisualizer from "./visualizers/heap/HeapVisualizer";
 import AVLVisualizer from "./visualizers/avl/AVLVisualizer";
 import BinaryTreeVisualizer from "./visualizers/binaryTree/BinaryTreeVisualizer";
 import LinkedListVisualizer from "./visualizers/linkedList/LinkedListVisualizer";
-import BubbleSortVisualizer from "./visualizers/bubbleSort/BubbleSortVisualiser";
-import InsertionSortVisualizer from "./visualizers/insertionSort/InsertionSortVisualizer";
-import SelectionSortVisualizer from "./visualizers/selectionSort/SelectionSortVisualizer";
-import MergeSortVisualizer from "./visualizers/mergeSort/MergeSortVisualizer";
-import QuickSortVisualizer from "./visualizers/quickSort/QuickSortVisualizer";
+import BubbleSortVisualizer from "./visualizers/array/sortingAlgos/bubbleSort/BubbleSortVisualiser";
+import InsertionSortVisualizer from "./visualizers/array/sortingAlgos/insertionSort/InsertionSortVisualizer";
+import SelectionSortVisualizer from "./visualizers/array/sortingAlgos/selectionSort/SelectionSortVisualizer";
+import MergeSortVisualizer from "./visualizers/array/sortingAlgos/mergeSort/MergeSortVisualizer";
+import QuickSortVisualizer from "./visualizers/array/sortingAlgos/quickSort/QuickSortVisualizer";
+import ArrayVisualizer from "./visualizers/array/arrayStructure/ArrayVisualizer";
+import BFSVisualizer from "./visualizers/bfs/BFSVisualizer";
+
 
 const App = () => {
   return (
@@ -32,6 +34,7 @@ const App = () => {
           <Route path="/selectionSort" element={<SelectionSortVisualizer />} />
           <Route path="/mergeSort" element={<MergeSortVisualizer />} />
           <Route path="/quickSort" element={<QuickSortVisualizer />} />
+          <Route path="/bfsTraversal" element={<BFSVisualizer />} />
           {/* <Route path="/graphs" element={<GraphVisualizer />} /> */}
           {/* <Route path="/dp" element={<DPVisualizer />} /> */}
           <Route path="/stack" element={<StackVisualizer />} />

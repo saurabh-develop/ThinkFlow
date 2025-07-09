@@ -36,7 +36,7 @@ const QuickSortControls = ({ onSort, onReset, setSpeed, onSetArray }) => {
             step="100"
             defaultValue="500"
             className="w-40 accent-purple-500"
-            onChange={(e) => setSpeed(Number(500 - e.target.value))}
+            onChange={(e) => setSpeed(Number(e.target.value))}
           />
         </div>
       </div>

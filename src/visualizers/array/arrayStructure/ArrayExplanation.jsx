@@ -1,5 +1,5 @@
+import ExplanationSection from "@/visualizers/ExplanationSection";
 import React from "react";
-import ExplanationSection from "../ExplanationSection.jsx"; 
 
 const codeSnippets = {
   javascript: `// JavaScript Array Example
