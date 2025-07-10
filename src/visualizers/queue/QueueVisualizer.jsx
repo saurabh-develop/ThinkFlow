@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
 import QueueBox from "./QueueBox";
-import Sidebar from "@/components/pages/SideBar";
 import QueueControls from "./QueueControls";
 import QueueExplanation from "./QueueExplanation";
 import { motion, AnimatePresence } from "framer-motion";
@@ -27,8 +26,6 @@ const QueueVisualizer = () => {
 
   return (
     <div className="flex min-h-screen text-white">
-      <Sidebar />
-
       <main className="flex-1 px-4 sm:px-8 py-10 text-white">
         <h1 className="text-3xl font-bold mb-8 bg-gradient-to-r from-[#8b3dff] to-[#e84aff] text-transparent bg-clip-text text-center">
           Queue Visualizer

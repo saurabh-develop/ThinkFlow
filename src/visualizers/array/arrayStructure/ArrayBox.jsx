@@ -13,12 +13,9 @@ const ArrayBox = ({ value, index, highlight, pathIndex }) => {
           : "border-white/20 hover:shadow-purple-400"
       }`}
     >
-      {/* Final Action Ping */}
       {highlight && (
         <div className="absolute -top-2 -right-2 w-3 h-3 bg-purple-500 rounded-full animate-ping"></div>
       )}
-
-      {/* Step Path Indicator */}
       {pathIndex !== undefined && (
         <div className="absolute top-1 left-1 text-xs border-purple-500 bg-blue-900/60 px-1 rounded">
           Step {pathIndex + 1}

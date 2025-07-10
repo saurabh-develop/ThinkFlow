@@ -8,7 +8,6 @@ import ReactFlow, {
 } from "reactflow";
 import "reactflow/dist/style.css";
 import { motion } from "framer-motion";
-import Sidebar from "@/components/pages/SideBar";
 import BinaryTreeControls from "./BinaryTreeControls";
 import BinaryTreeAnalysis from "./BinaryTreeAnalysis";
 import { BinaryTree } from "./BinaryTreeLogic";
@@ -153,7 +152,6 @@ const BinaryTreeFlowVisualizer = () => {
 
   return (
     <div className="flex min-h-screen text-white">
-      <Sidebar />
       <main className="flex-1 px-4 sm:px-8 py-10">
         <h1 className="text-3xl font-bold mb-6 text-center bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
           Binary Tree Visualizer

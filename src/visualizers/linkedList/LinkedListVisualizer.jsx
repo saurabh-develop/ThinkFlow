@@ -1,6 +1,5 @@
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
-import Sidebar from "@/components/pages/SideBar";
 import LinkedListControls from "./LinkedListControls";
 import {
   SinglyLinkedList,
@@ -73,7 +72,6 @@ const LinkedListVisualizer = () => {
 
   return (
     <div className="flex min-h-screen text-white">
-      <Sidebar />
       <main className="flex-1 p-6 sm:p-10">
         <h1 className="text-3xl font-bold text-center mb-8 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
           Linked List Visualizer

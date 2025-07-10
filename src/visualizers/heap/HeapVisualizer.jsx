@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import HeapControls from "./HeapControls";
 import HeapNode from "./HeapNode";
-import Sidebar from "@/components/pages/SideBar";
 import HeapExplanation from "./HeapExplanation";
 
 const HeapVisualizer = () => {
@@ -73,8 +72,6 @@ const HeapVisualizer = () => {
 
   return (
     <div className="flex min-h-screen text-white">
-      <Sidebar />
-
       <main className="flex-1 flex flex-col items-center px-4 sm:px-8 py-10 text-white">
         <h1 className="text-3xl font-bold mb-6 bg-gradient-to-r from-[#8b3dff] to-[#e84aff] text-transparent bg-clip-text text-center">
           Heap Visualizer

@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from "react";
-import Sidebar from "@/components/pages/SideBar";
 import MergeSortControls from "./MergeSortControls";
 import MergeSortTreeView from "./MergeSortTreeView";
 import MergeSortExplanation from "./MergeSortExplanation";
@@ -59,7 +58,6 @@ const MergeSortVisualizer = () => {
 
   return (
     <div className="flex min-h-screen text-white">
-      <Sidebar />
       <main className="flex-1 px-4 sm:px-8 py-10">
         <h2 className="text-3xl font-bold text-center mb-8 bg-gradient-to-r from-[#e84aff] to-[#8b3dff] text-transparent bg-clip-text">
           🧬 Merge Sort Visualizer

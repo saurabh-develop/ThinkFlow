@@ -2,7 +2,6 @@ import React, { useEffect, useState, useRef } from "react";
 import InsertionSortControls from "./InsertionSortControls";
 import InsertionSortCode from "./InsertionSortCode";
 import InsertionSortExplanation from "./InsertionSortExplanation";
-import Sidebar from "@/components/pages/SideBar";
 import { insertionSortSteps } from "@/visualizers/sortingAlgorithms";
 
 const InsertionSortVisualizer = () => {
@@ -53,7 +52,6 @@ const InsertionSortVisualizer = () => {
 
   return (
     <div className="flex min-h-screen text-white">
-      <Sidebar />
       <main className="flex-1 px-4 sm:px-8 py-10">
         <h2 className="text-3xl font-bold text-center mb-8 bg-gradient-to-r from-[#e84aff] to-[#8b3dff] text-transparent bg-clip-text">
           🔂 Insertion Sort Visualizer

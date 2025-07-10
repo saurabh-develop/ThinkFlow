@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Sidebar from "./SideBar";
 
 const dataStructures = [
   {
@@ -8,6 +7,12 @@ const dataStructures = [
     path: "/array",
     description:
       "Store elements in contiguous memory for fast access and iteration.",
+  },
+  {
+    title: "Linked List",
+    path: "/linkedList",
+    description:
+      "Linear structure with dynamic memory; ideal for frequent insertions and deletions.",
   },
   {
     title: "Stack",
@@ -40,45 +45,97 @@ const dataStructures = [
 ];
 
 const algorithms = [
+  // Sorting Algorithms
   {
-    title: "Array",
-    path: "/sorting",
+    title: "Bubble Sort",
+    path: "/bubbleSort",
     description:
-      "Visualize classic sorting techniques like QuickSort and MergeSort.",
+      "Repeatedly swaps adjacent elements to bubble up the largest element.",
   },
   {
-    title: "Graph",
-    path: "/graphs",
+    title: "Insertion Sort",
+    path: "/insertionSort",
     description:
-      "Explore traversal, shortest path, and connectivity algorithms.",
+      "Builds the final sorted array one item at a time by inserting elements.",
   },
   {
-    title: "DP",
-    path: "/dp",
+    title: "Selection Sort",
+    path: "/selectionSort",
     description:
-      "Master Dynamic Programming with visual step-by-step solutions.",
+      "Selects the smallest element from unsorted and places it at the beginning.",
+  },
+  {
+    title: "Merge Sort",
+    path: "/mergeSort",
+    description:
+      "Divide and conquer algorithm that splits arrays and merges them sorted.",
+  },
+  {
+    title: "Quick Sort",
+    path: "/quickSort",
+    description:
+      "Efficient sorting using divide-and-conquer and partitioning techniques.",
+  },
+  // Graph Algorithms
+  {
+    title: "BFS (Breadth-First Search)",
+    path: "/bfsTraversal",
+    description:
+      "Explores nodes level by level, ideal for shortest path in unweighted graphs.",
+  },
+  {
+    title: "DFS (Depth-First Search)",
+    path: "/dfsTraversal",
+    description:
+      "Traverses as deep as possible before backtracking, useful in topological sort.",
+  },
+  {
+    title: "Dijkstra's Algorithm",
+    path: "/dijkstra",
+    description:
+      "Finds the shortest path from a source to all vertices in a weighted graph.",
+  },
+  {
+    title: "Topological Sort",
+    path: "/toposort",
+    description: "Linear ordering of vertices in a DAG based on dependencies.",
+  },
+  // Dynamic Programming
+  {
+    title: "0/1 Knapsack",
+    path: "/knapsack",
+    description:
+      "Optimize value while respecting weight constraints using dynamic programming.",
+  },
+  {
+    title: "Longest Common Subsequence (LCS)",
+    path: "/lcs",
+    description:
+      "Find the longest subsequence common to two sequences using DP.",
+  },
+  {
+    title: "Matrix Chain Multiplication",
+    path: "/matrixChain",
+    description: "Optimize the cost of matrix multiplication order using DP.",
   },
 ];
 
 const Dashboard = () => {
   return (
-    <div className="flex min-h-screen bg-[#0d0d15] text-white">
-      <Sidebar />
+    <div className="flex min-h-screen pt-[64px] px-4 sm:px-8 py-10">
+      <main className="w-full max-w-7xl mx-auto space-y-14">
+        {/* Section: Data Structures */}
+        <section>
+          <motion.h2
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4 }}
+            className="text-3xl font-bold mb-8 bg-gradient-to-r from-[#8b3dff] to-[#e84aff] text-transparent bg-clip-text"
+          >
+            Data Structures
+          </motion.h2>
 
-      {/* Main Content */}
-      <main className="flex-1 px-4 sm:px-8 py-10">
-        <div className="max-w-6xl mx-auto space-y-14">
-          {/* Section: Data Structures */}
-          <section>
-            <motion.h2
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4 }}
-              className="text-3xl font-bold mb-8 bg-gradient-to-r from-[#8b3dff] to-[#e84aff] text-transparent bg-clip-text"
-            >
-              Data Structures
-            </motion.h2>
-
+          <div className="flex justify-center">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
               {dataStructures.map((item, i) => (
                 <motion.div
@@ -93,19 +150,21 @@ const Dashboard = () => {
                 </motion.div>
               ))}
             </div>
-          </section>
+          </div>
+        </section>
 
-          {/* Section: Algorithms */}
-          <section>
-            <motion.h2
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4 }}
-              className="text-3xl font-bold mb-8 bg-gradient-to-r from-[#e84aff] to-[#8b3dff] text-transparent bg-clip-text"
-            >
-              Algorithms
-            </motion.h2>
+        {/* Section: Algorithms */}
+        <section>
+          <motion.h2
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4 }}
+            className="text-3xl font-bold mb-8 bg-gradient-to-r from-[#e84aff] to-[#8b3dff] text-transparent bg-clip-text"
+          >
+            Algorithms
+          </motion.h2>
 
+          <div className="flex justify-center">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
               {algorithms.map((item, i) => (
                 <motion.div
@@ -120,8 +179,8 @@ const Dashboard = () => {
                 </motion.div>
               ))}
             </div>
-          </section>
-        </div>
+          </div>
+        </section>
       </main>
     </div>
   );

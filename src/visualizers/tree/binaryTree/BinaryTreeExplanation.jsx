@@ -1,5 +1,5 @@
 import React from "react";
-import ExplanationSection from "../ExplanationSection.jsx";
+import ExplanationSection from "../../ExplanationSection.jsx";
 
 const codeSnippets = {
   javascript: `// Binary Tree Node

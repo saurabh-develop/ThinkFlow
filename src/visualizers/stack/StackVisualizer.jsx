@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import StackControls from "./StackControls";
 import StackBox from "./StackBox";
 import { AnimatePresence, motion } from "framer-motion";
-import Sidebar from "@/components/pages/SideBar";
 import CodeImplementation from "./CodeImplementation";
 
 const StackVisualizer = () => {
@@ -30,8 +29,6 @@ const StackVisualizer = () => {
 
   return (
     <div className="flex min-h-screen text-white">
-      <Sidebar />
-
       <main className="flex-1 p-8 text-white text-center">
         <h1 className="text-3xl font-bold mb-6 bg-gradient-to-r from-[#8b3dff] to-[#e84aff] text-transparent bg-clip-text">
           Stack Visualizer

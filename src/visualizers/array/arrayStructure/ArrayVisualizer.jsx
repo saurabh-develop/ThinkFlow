@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import ArrayControls from "./ArrayControls";
 import ArrayBox from "./ArrayBox";
-import Sidebar from "@/components/pages/SideBar";
 import ArrayExplanation from "./ArrayExplanation";
 
 const ArrayVisualizer = () => {
@@ -32,8 +31,6 @@ const ArrayVisualizer = () => {
 
   return (
     <div className="flex min-h-screen text-white">
-      <Sidebar />
-
       <main className="flex-1 px-4 sm:px-8 py-10 text-white">
         {/* Header */}
         <h1 className="text-3xl font-bold mb-8 bg-gradient-to-r from-[#8b3dff] to-[#e84aff] text-transparent bg-clip-text text-center">
