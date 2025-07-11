@@ -24,6 +24,7 @@ import QuickSortVisualizer from "./visualizers/array/sortingAlgos/quickSort/Quic
 import BFSVisualizer from "./visualizers/bfs/BFSVisualizer";
 import AVLFlowVisualizer from "./visualizers/tree/avl/AVLVisualizer.jsx";
 import DFSVisualizer from "./visualizers/dfs/DFSVisualizer.jsx";
+import DijkstraVisualizer from "./visualizers/dijkstra/DijkstraVisualizer.jsx";
 
 const App = () => {
   return (
@@ -52,6 +53,7 @@ const App = () => {
           <Route path="/quickSort" element={<QuickSortVisualizer />} />
           <Route path="/bfsTraversal" element={<BFSVisualizer />} />
           <Route path="/dfsTraversal" element={<DFSVisualizer />} />
+          <Route path="/dijkstra" element={<DijkstraVisualizer />} />
         </Route>
       </Routes>
     </Router>
