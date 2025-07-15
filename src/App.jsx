@@ -25,6 +25,7 @@ import BFSVisualizer from "./visualizers/bfs/BFSVisualizer";
 import AVLFlowVisualizer from "./visualizers/tree/avl/AVLVisualizer.jsx";
 import DFSVisualizer from "./visualizers/dfs/DFSVisualizer.jsx";
 import DijkstraVisualizer from "./visualizers/dijkstra/DijkstraVisualizer.jsx";
+import KnapsackTabulationVisualizer from "./visualizers/knapsack/Tabulation/KnapsackTabulationVisualizer.jsx";
 
 const App = () => {
   return (
@@ -54,6 +55,10 @@ const App = () => {
           <Route path="/bfsTraversal" element={<BFSVisualizer />} />
           <Route path="/dfsTraversal" element={<DFSVisualizer />} />
           <Route path="/dijkstra" element={<DijkstraVisualizer />} />
+          <Route
+            path="/tabulation"
+            element={<KnapsackTabulationVisualizer />}
+          />
         </Route>
       </Routes>
     </Router>

@@ -6,7 +6,7 @@ const BubbleSortControls = ({
   setSpeed,
   setArray,
   isSorting,
-  setIsSorting,
+  setIsSorting, 
 }) => {
   const [input, setInput] = useState("");
 

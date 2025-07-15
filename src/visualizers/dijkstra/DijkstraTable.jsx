@@ -2,7 +2,7 @@ import React from "react";
 import useDijkstraStore from "./useDijkstraStore";
 
 const DijkstraTable = ({ steps, currentStepIndex }) => {
-  const { finalStep } = useDijkstraStore();
+  const finalStep = useDijkstraStore((state) => state.finalStep);
 
   const step = steps?.[currentStepIndex] ?? finalStep;
 
@@ -58,6 +58,11 @@ const DijkstraTable = ({ steps, currentStepIndex }) => {
           })}
         </tbody>
       </table>
+
+      <div className="mt-4 text-sm text-white/70">
+        ⏱️ <span className="font-semibold text-white">Time Complexity:</span>{" "}
+        O((V + E) log V) using Min Heap
+      </div>
     </div>
   );
 };

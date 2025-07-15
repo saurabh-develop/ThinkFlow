@@ -10,7 +10,7 @@ const HeapControls = ({ heap, setHeap, insert, deleteRoot }) => {
     if (!isNaN(num)) {
       insert(num);
       setValue("");
-    }
+    } 
   };
 
   const handleRandom = () => {

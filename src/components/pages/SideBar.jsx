@@ -57,7 +57,7 @@ const Sidebar = () => {
       label: "DP",
       title: "Dynamic Programming",
       links: [
-        { label: "Knapsack", path: "/knapsack" },
+        { label: "Tabulation", path: "/tabulation" },
         { label: "LCS", path: "/lcs" },
         { label: "Matrix Chain", path: "/matrixChain" },
         { label: "Coin Change", path: "/coinChange" },

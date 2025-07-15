@@ -84,7 +84,7 @@ const HeapVisualizer = () => {
               activeTab === "visualization"
                 ? "bg-white/10 text-white"
                 : "bg-transparent text-white/50"
-            }`}
+            }`} 
             onClick={() => setActiveTab("visualization")}
           >
             Visualization

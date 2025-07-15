@@ -102,8 +102,8 @@ const algorithms = [
   },
   // Dynamic Programming
   {
-    title: "0/1 Knapsack",
-    path: "/knapsack",
+    title: "Tabulation",
+    path: "/tabulation",
     description:
       "Optimize value while respecting weight constraints using dynamic programming.",
   },
