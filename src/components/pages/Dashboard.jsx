@@ -95,28 +95,12 @@ const algorithms = [
     description:
       "Finds the shortest path from a source to all vertices in a weighted graph.",
   },
-  {
-    title: "Topological Sort",
-    path: "/toposort",
-    description: "Linear ordering of vertices in a DAG based on dependencies.",
-  },
   // Dynamic Programming
   {
     title: "Tabulation",
     path: "/tabulation",
     description:
       "Optimize value while respecting weight constraints using dynamic programming.",
-  },
-  {
-    title: "Longest Common Subsequence (LCS)",
-    path: "/lcs",
-    description:
-      "Find the longest subsequence common to two sequences using DP.",
-  },
-  {
-    title: "Matrix Chain Multiplication",
-    path: "/matrixChain",
-    description: "Optimize the cost of matrix multiplication order using DP.",
   },
 ];
 

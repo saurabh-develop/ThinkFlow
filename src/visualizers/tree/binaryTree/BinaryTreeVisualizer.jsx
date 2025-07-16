@@ -128,6 +128,7 @@ const BinaryTreeFlowVisualizer = () => {
 
   const handleTraversal = async (type) => {
     const tree = treeRef.current;
+    if (!tree.root) return;
     let result = [];
     if (type === "inorder") result = tree.traverseInOrder();
     if (type === "preorder") result = tree.traversePreOrder();

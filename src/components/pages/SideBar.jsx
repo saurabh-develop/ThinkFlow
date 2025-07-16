@@ -50,17 +50,14 @@ const Sidebar = () => {
         { label: "BFS", path: "/bfsTraversal" },
         { label: "DFS", path: "/dfsTraversal" },
         { label: "Dijkstra", path: "/dijkstra" },
-        { label: "Topological Sort", path: "/toposort" },
       ],
     },
     DP: {
       label: "DP",
       title: "Dynamic Programming",
       links: [
+        { label: "Recursion", path: "/recursion" },
         { label: "Tabulation", path: "/tabulation" },
-        { label: "LCS", path: "/lcs" },
-        { label: "Matrix Chain", path: "/matrixChain" },
-        { label: "Coin Change", path: "/coinChange" },
       ],
     },
   };

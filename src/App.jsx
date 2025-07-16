@@ -12,7 +12,6 @@ import Dashboard from "./components/pages/Dashboard";
 import StackVisualizer from "./visualizers/stack/StackVisualizer";
 import QueueVisualizer from "./visualizers/queue/QueueVisualizer";
 import HeapVisualizer from "./visualizers/heap/HeapVisualizer";
-
 import BinaryTreeVisualizer from "./visualizers/tree/binaryTree/BinaryTreeVisualizer.jsx";
 import LinkedListVisualizer from "./visualizers/linkedList/LinkedListVisualizer";
 import ArrayVisualizer from "./visualizers/array/arrayStructure/ArrayVisualizer";
@@ -26,6 +25,7 @@ import AVLFlowVisualizer from "./visualizers/tree/avl/AVLVisualizer.jsx";
 import DFSVisualizer from "./visualizers/dfs/DFSVisualizer.jsx";
 import DijkstraVisualizer from "./visualizers/dijkstra/DijkstraVisualizer.jsx";
 import KnapsackTabulationVisualizer from "./visualizers/knapsack/Tabulation/KnapsackTabulationVisualizer.jsx";
+import KnapsackRecursiveVisualizer from "./visualizers/knapsack/Recursive/KnapsackRecursiveVisualizer.jsx";
 
 const App = () => {
   return (
@@ -59,6 +59,7 @@ const App = () => {
             path="/tabulation"
             element={<KnapsackTabulationVisualizer />}
           />
+          <Route path="/recursion" element={<KnapsackRecursiveVisualizer />} />
         </Route>
       </Routes>
     </Router>
