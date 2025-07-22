@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { Mail, Phone, Github, Linkedin } from "lucide-react";
+import { Mail, Github, Linkedin } from "lucide-react";
 import emailjs from "emailjs-com";
 
 const Contact = () => {
@@ -10,10 +10,10 @@ const Contact = () => {
     e.preventDefault();
     emailjs
       .sendForm(
-        "service_pjwd02b",
-        "template_oa8jicg",
-        form.current,
-        "NCqGshcROOu6Dg7TR"
+        "service_pjwd02b", //Service ID
+        "template_oa8jicg", //Template ID
+        form.current, // Form ID
+        "NCqGshcROOu6Dg7TR" // Public API Key
       )
       .then(
         () => {

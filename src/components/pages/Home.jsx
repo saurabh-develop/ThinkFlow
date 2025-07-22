@@ -8,19 +8,19 @@ const HomePage = () => {
 
   const cards = [
     {
-      title: "Sorting Algorithms",
-      desc: "Visualize popular sorting techniques like bubble, merge, and quick sort with interactive steps.",
-      path: "/sorting",
-    },
-    {
       title: "Data Structures",
       desc: "Learn how arrays, stacks, queues, trees, and heaps work internally.",
       path: "/array",
     },
     {
+      title: "Sorting Algorithms",
+      desc: "Visualize popular sorting techniques like bubble, merge, and quick sort with interactive steps.",
+      path: "/bubbleSort",
+    },
+    {
       title: "Graph & DP",
       desc: "Watch graph traversals and dynamic programming solutions unfold in real-time.",
-      path: "/graphs",
+      path: "/bfsTraversal",
     },
   ];
 
@@ -59,8 +59,7 @@ const HomePage = () => {
         {cards.map((item, idx) => (
           <motion.div
             key={idx}
-            whileHover={{ scale: 1.04 }}
-            transition={{ duration: 0.3 }}
+            whileHover={{ scale: 1.03 }}
             className="backdrop-blur-md bg-white/5 border border-white/10 px-6 py-8 rounded-2xl shadow-lg hover:shadow-purple-500/30 transition-all"
           >
             <h2 className="text-2xl font-semibold mb-3 bg-gradient-to-r from-white to-purple-300 text-transparent bg-clip-text">

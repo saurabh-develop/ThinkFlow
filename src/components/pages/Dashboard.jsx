@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
+// Data Structures
 const dataStructures = [
   {
     title: "Array",
@@ -44,6 +45,7 @@ const dataStructures = [
   },
 ];
 
+// Algorithms
 const algorithms = [
   // Sorting Algorithms
   {
@@ -97,10 +99,16 @@ const algorithms = [
   },
   // Dynamic Programming
   {
+    title: "Recursion",
+    path: "/recursion",
+    description:
+      "Visualize the recursive decision tree of the 0/1 Knapsack problem and explore its exponential nature.",
+  },
+  {
     title: "Tabulation",
     path: "/tabulation",
     description:
-      "Optimize value while respecting weight constraints using dynamic programming.",
+      "Solve the 0/1 Knapsack problem bottom-up using dynamic programming and a 2D table.",
   },
 ];
 

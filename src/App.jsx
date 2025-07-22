@@ -40,6 +40,7 @@ const App = () => {
 
         {/* Layout for Navbar + Sidebar */}
         <Route element={<MainLayout />}>
+          {/* Data Structure */}
           <Route path="/array" element={<ArrayVisualizer />} />
           <Route path="/linkedList" element={<LinkedListVisualizer />} />
           <Route path="/stack" element={<StackVisualizer />} />
@@ -47,19 +48,23 @@ const App = () => {
           <Route path="/heap" element={<HeapVisualizer />} />
           <Route path="/binarytree" element={<BinaryTreeVisualizer />} />
           <Route path="/avltree" element={<AVLFlowVisualizer />} />
+          {/* Algorithms */}
+          {/* Sorting Algos */}
           <Route path="/bubbleSort" element={<BubbleSortVisualizer />} />
           <Route path="/insertionSort" element={<InsertionSortVisualizer />} />
           <Route path="/selectionSort" element={<SelectionSortVisualizer />} />
           <Route path="/mergeSort" element={<MergeSortVisualizer />} />
           <Route path="/quickSort" element={<QuickSortVisualizer />} />
+          {/* Graph Algos */}
           <Route path="/bfsTraversal" element={<BFSVisualizer />} />
           <Route path="/dfsTraversal" element={<DFSVisualizer />} />
           <Route path="/dijkstra" element={<DijkstraVisualizer />} />
+          {/* DP Algos */}
+          <Route path="/recursion" element={<KnapsackRecursiveVisualizer />} />
           <Route
             path="/tabulation"
             element={<KnapsackTabulationVisualizer />}
           />
-          <Route path="/recursion" element={<KnapsackRecursiveVisualizer />} />
         </Route>
       </Routes>
     </Router>
