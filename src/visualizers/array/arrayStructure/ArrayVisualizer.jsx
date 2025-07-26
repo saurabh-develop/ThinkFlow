@@ -30,10 +30,10 @@ const ArrayVisualizer = () => {
   };
 
   return (
-    <div className="flex min-h-screen text-white">
-      <main className="flex-1 px-4 sm:px-8 py-10 text-white">
+    <div className="flex flex-col min-h-screen text-white bg-gradient-to-br from-[#0d0d15] to-[#1a1a2e] px-4">
+      <main className="flex-1 py-10 w-full max-w-7xl mx-auto">
         {/* Header */}
-        <h1 className="text-3xl font-bold mb-8 bg-gradient-to-r from-[#8b3dff] to-[#e84aff] text-transparent bg-clip-text text-center">
+        <h1 className="text-3xl sm:text-4xl font-bold mb-10 text-center bg-gradient-to-r from-[#8b3dff] to-[#e84aff] text-transparent bg-clip-text">
           Array Visualizer
         </h1>
 
@@ -46,6 +46,7 @@ const ArrayVisualizer = () => {
                 : "bg-transparent text-white/50"
             }`}
             onClick={() => setActiveTab("visualization")}
+            aria-pressed={activeTab === "visualization"}
           >
             Visualization
           </button>
@@ -56,6 +57,7 @@ const ArrayVisualizer = () => {
                 : "bg-transparent text-white/50"
             }`}
             onClick={() => setActiveTab("explanation")}
+            aria-pressed={activeTab === "explanation"}
           >
             Explanation
           </button>
@@ -73,8 +75,8 @@ const ArrayVisualizer = () => {
               />
             </div>
 
-            {/* Boxes */}
-            <div className="flex justify-center mt-12 flex-wrap gap-4 max-w-5xl mx-auto">
+            {/* Visualization */}
+            <div className="flex justify-center mt-12 flex-wrap gap-4 max-w-6xl mx-auto px-2">
               {array.map((value, index) => (
                 <ArrayBox
                   key={index}
@@ -91,8 +93,8 @@ const ArrayVisualizer = () => {
             </div>
 
             {/* Time Complexity Section */}
-            <div className="mt-16 w-full max-w-4xl mx-auto">
-              <h2 className="text-2xl font-semibold mb-6 bg-gradient-to-r from-[#e84aff] to-[#8b3dff] text-transparent bg-clip-text text-center">
+            <div className="mt-16 w-full max-w-4xl mx-auto px-2">
+              <h2 className="text-2xl font-semibold mb-6 text-center bg-gradient-to-r from-[#e84aff] to-[#8b3dff] text-transparent bg-clip-text">
                 Time Complexity
               </h2>
 
@@ -110,7 +112,7 @@ const ArrayVisualizer = () => {
                     <div className="font-semibold text-purple-300 mb-2 text-base">
                       {op}
                     </div>
-                    <div className="text-base">
+                    <div className="text-base space-y-1">
                       <p>
                         <span className="text-purple-400">Best:</span> {best}
                       </p>
