@@ -72,8 +72,8 @@ const LinkedListVisualizer = () => {
 
   return (
     <div className="flex min-h-screen text-white">
-      <main className="flex-1 p-6 sm:p-10">
-        <h1 className="text-3xl font-bold text-center mb-8 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
+      <main className="flex-1 p-4 sm:p-6 md:p-10 container mx-auto">
+        <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-center mb-6 sm:mb-8 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
           Linked List Visualizer
         </h1>
 
@@ -86,6 +86,7 @@ const LinkedListVisualizer = () => {
                 : "bg-transparent text-white/50"
             }`}
             onClick={() => setActiveTab("visualization")}
+            aria-pressed={activeTab === "visualization"}
           >
             Visualization
           </button>
@@ -96,6 +97,7 @@ const LinkedListVisualizer = () => {
                 : "bg-transparent text-white/50"
             }`}
             onClick={() => setActiveTab("explanation")}
+            aria-pressed={activeTab === "explanation"}
           >
             Explanation
           </button>
@@ -113,7 +115,7 @@ const LinkedListVisualizer = () => {
             />
 
             <div className="overflow-x-auto">
-              <div className="flex items-end justify-start mt-10 gap-6 min-w-fit">
+              <div className="flex flex-wrap sm:flex-nowrap items-end justify-start mt-10 gap-4 sm:gap-6 min-w-fit">
                 {visualList.map((val, idx) => {
                   const isHead = idx === 0;
                   const isTail = idx === visualList.length - 1;
@@ -138,13 +140,13 @@ const LinkedListVisualizer = () => {
                           animate={
                             highlighted === idx
                               ? {
-                                  scale: [1, 1.2, 1],
+                                  scale: [1, 2, 1],
                                   backgroundColor: "#facc15",
                                 }
                               : {}
                           }
                           transition={{ duration: 0.4 }}
-                          className={`px-5 py-2 rounded-2xl font-bold text-sm sm:text-base shadow-lg transition-all duration-300 min-w-[48px] text-center ${
+                          className={`px-4 py-2 rounded-2xl font-bold text-xs sm:text-sm md:text-base shadow-lg transition-all duration-300 min-w-[40px] sm:min-w-[48px] text-center ${
                             highlighted === idx
                               ? "text-black"
                               : "bg-[#8b3dff] text-white"
@@ -158,19 +160,17 @@ const LinkedListVisualizer = () => {
                       {idx !== visualList.length - 1 && (
                         <div className="text-yellow-400 flex flex-col items-center">
                           {listType === "doubly" ? (
-                            <>
-                              <motion.span
-                                animate={{ rotate: animatingReverse ? 180 : 0 }}
-                                transition={{ duration: 0.5 }}
-                              >
-                                ⇄
-                              </motion.span>
-                            </>
+                            <motion.span
+                              animate={{ rotate: animatingReverse ? 180 : 0 }}
+                              transition={{ duration: 0.5 }}
+                            >
+                              ⇄
+                            </motion.span>
                           ) : (
                             <motion.span
                               animate={{ rotate: animatingReverse ? 180 : 0 }}
                               transition={{ duration: 0.5 }}
-                              className="text-4xl"
+                              className="text-3xl sm:text-4xl"
                             >
                               →
                             </motion.span>
@@ -187,12 +187,14 @@ const LinkedListVisualizer = () => {
                 })}
               </div>
             </div>
+
+            {/* Time Complexity Table */}
             <div className="p-4 rounded-2xl bg-[#1e1e2f]/60 backdrop-blur-md text-white shadow-lg mt-10">
-              <h2 className="text-2xl font-bold text-center text-purple-400 mb-4">
+              <h2 className="text-xl sm:text-2xl font-bold text-center text-purple-400 mb-4">
                 ⏱️ Time Complexity
               </h2>
-              <div className="overflow-x-auto">
-                <table className="w-full text-sm text-left border-collapse">
+              <div className="overflow-x-auto text-xs sm:text-sm">
+                <table className="min-w-[500px] w-full text-left border-collapse">
                   <thead>
                     <tr className="text-purple-300 border-b border-purple-600">
                       <th className="py-2 px-4">Operation</th>
@@ -255,6 +257,7 @@ const LinkedListVisualizer = () => {
             </div>
           </>
         )}
+
         {activeTab === "explanation" && <LinkedListExplanation />}
       </main>
     </div>
