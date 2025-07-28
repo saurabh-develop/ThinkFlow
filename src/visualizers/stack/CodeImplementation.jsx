@@ -53,7 +53,7 @@ const stackDescription = [
 ];
 
 const stackApplications = [
-  "Backtracking algorithms (DFS, maze solving)",
+  `Browser History: When you visit a new page, it's pushed onto a history stack. Pressing "Back" pops the last visited page.`,
   "Undo/Redo in text editors",
   "Function call stack in programming",
 ];

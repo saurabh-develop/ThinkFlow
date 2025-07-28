@@ -163,9 +163,10 @@ const AVLFlowVisualizer = () => {
   };
 
   return (
-    <div className="flex min-h-screen text-white">
-      <main className="flex-1 px-4 sm:px-8 py-10">
-        <h1 className="text-3xl font-bold mb-6 text-center bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
+    <div className="flex flex-col min-h-screen text-white bg-gradient-to-br from-[#0d0d15] to-[#1a1a2e] px-4">
+      <main className="flex-1 py-10 w-full max-w-7xl mx-auto">
+        {/* Header */}
+        <h1 className="text-3xl sm:text-4xl font-bold mb-10 text-center bg-gradient-to-r from-[#8b3dff] to-[#e84aff] text-transparent bg-clip-text">
           AVL Tree Visualizer
         </h1>
 

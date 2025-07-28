@@ -28,9 +28,10 @@ const StackVisualizer = () => {
   };
 
   return (
-    <div className="flex min-h-screen text-white">
-      <main className="flex-1 p-8 text-white text-center">
-        <h1 className="text-3xl font-bold mb-6 bg-gradient-to-r from-[#8b3dff] to-[#e84aff] text-transparent bg-clip-text">
+    <div className="flex flex-col min-h-screen text-white bg-gradient-to-br from-[#0d0d15] to-[#1a1a2e] px-4">
+      <main className="flex-1 py-10 w-full max-w-7xl mx-auto">
+        {/* Header */}
+        <h1 className="text-3xl sm:text-4xl font-bold mb-10 text-center bg-gradient-to-r from-[#8b3dff] to-[#e84aff] text-transparent bg-clip-text">
           Stack Visualizer
         </h1>
 
@@ -71,7 +72,7 @@ const StackVisualizer = () => {
                       key={index}
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: 20 }}
+                      exit={{ opacity: 0, y: -20 }}
                       transition={{ duration: 0.3 }}
                     >
                       <StackBox
@@ -106,60 +107,7 @@ const StackVisualizer = () => {
           </>
         )}
 
-        {activeTab === "explanation" && (
-          <div className="max-w-3xl mx-auto text-left mt-10 space-y-6">
-            <h2 className="text-2xl font-semibold bg-gradient-to-r from-purple-400 to-pink-500 text-transparent bg-clip-text">
-              What is a Stack?
-            </h2>
-            <p className="text-purple-200 text-sm leading-relaxed">
-              A <span className="text-white font-semibold">Stack</span> is a
-              linear data structure that follows the
-              <span className="text-white font-semibold">
-                {" "}
-                LIFO (Last-In-First-Out){" "}
-              </span>{" "}
-              principle. This means the last element added to the stack is the
-              first one to be removed.
-            </p>
-
-            <div className="border border-white/10 bg-white/5 backdrop-blur rounded-xl p-4 shadow space-y-4">
-              <h3 className="text-white font-semibold">
-                📦 Real-World Examples of a Stack:
-              </h3>
-              <ul className="list-disc list-inside text-purple-200 text-sm space-y-1">
-                <li>
-                  <span className="text-white font-semibold">
-                    Browser History:
-                  </span>{" "}
-                  When you visit a new page, it's pushed onto a history stack.
-                  Pressing "Back" pops the last visited page.
-                </li>
-                <li>
-                  <span className="text-white font-semibold">
-                    Undo/Redo Functionality:
-                  </span>{" "}
-                  Text editors like VS Code or Word maintain a stack of actions.
-                  Undo pops the last action.
-                </li>
-                <li>
-                  <span className="text-white font-semibold">
-                    Call Stack in Programming:
-                  </span>{" "}
-                  When a function is called, it’s pushed to the call stack. Once
-                  it returns, it’s popped off.
-                </li>
-                <li>
-                  <span className="text-white font-semibold">
-                    Stack of Plates:
-                  </span>{" "}
-                  Imagine a stack of dishes — you add to the top, and remove
-                  from the top.
-                </li>
-              </ul>
-            </div>
-            <CodeImplementation />
-          </div>
-        )}
+        {activeTab === "explanation" && <CodeImplementation />}
       </main>
     </div>
   );
