@@ -33,6 +33,9 @@ const LinkedListVisualizer = () => {
 
   const handleInsert = (value, position) => {
     if (!value) return;
+    if (isNaN(value)) {
+      reutrn;
+    }
     const ListClass = getListClass();
     if (!(listRef.current instanceof ListClass)) {
       listRef.current = new ListClass();

@@ -10,6 +10,9 @@ const StackVisualizer = () => {
   const [activeTab, setActiveTab] = useState("visualization");
 
   const push = (value) => {
+    if (isNaN(value)) {
+      reutrn;
+    }
     const newStack = [...stack, value];
     setStack(newStack);
     setTopIndex(newStack.length - 1);

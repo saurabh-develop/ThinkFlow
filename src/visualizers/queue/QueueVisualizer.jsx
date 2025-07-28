@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useRef } from "react";
 import QueueBox from "./QueueBox";
 import QueueControls from "./QueueControls";
 import QueueExplanation from "./QueueExplanation";
@@ -6,12 +6,12 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const QueueVisualizer = () => {
   const [queue, setQueue] = useState([]);
-  const [highlightIndex, setHighlightIndex] = useState(null);
   const [activeTab, setActiveTab] = useState("visualization");
-  const [containerWidth, setContainerWidth] = useState("auto");
-  const boxRowRef = useRef(null);
 
   const enqueue = (value) => {
+    if (isNaN(value)) {
+      reutrn;
+    }
     setQueue((prev) => [...prev, value]);
   };
 
@@ -21,7 +21,6 @@ const QueueVisualizer = () => {
 
   const reset = () => {
     setQueue([]);
-    setHighlightIndex(null);
   };
 
   return (
@@ -64,19 +63,14 @@ const QueueVisualizer = () => {
             {/* Visual Queue */}
             <div className="relative flex justify-center mt-12">
               <div className="min-h-[140px] w-full max-w-5xl border border-purple-400 rounded-xl bg-white/5 backdrop-blur-sm flex items-center px-4 overflow-x-auto shadow-inner scroll-smooth">
-                <div
-                  ref={boxRowRef}
-                  className="flex justify-start gap-4"
-                  style={{ width: containerWidth }} // 💥 lock the width to prevent shift
-                >
+                <div className="flex justify-start gap-4">
                   <AnimatePresence initial={false}>
                     {queue.map((value, index) => (
                       <motion.div
                         key={value + "-" + index}
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        transition={{ duration: 0.2 }}
+                        initial={{ opacity: 0, x: 20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        exit={{ opacity: 0, x: 20 }}
                         className="flex-none relative"
                         style={{ position: "relative" }}
                       >
@@ -95,7 +89,6 @@ const QueueVisualizer = () => {
                             value={value}
                             isFront={index === 0}
                             isRear={index === queue.length - 1}
-                            highlight={index === highlightIndex}
                           />
                         </motion.div>
                       </motion.div>

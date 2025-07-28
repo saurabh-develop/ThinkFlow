@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
-const HeapControls = ({ heap, setHeap, insert, deleteRoot }) => {
+const HeapControls = ({ heap, setHeap, insert, deleteRoot, isMinHeap }) => {
   const [value, setValue] = useState("");
 
   const handleInsert = () => {
@@ -10,7 +10,7 @@ const HeapControls = ({ heap, setHeap, insert, deleteRoot }) => {
     if (!isNaN(num)) {
       insert(num);
       setValue("");
-    } 
+    }
   };
 
   const handleRandom = () => {
@@ -18,22 +18,25 @@ const HeapControls = ({ heap, setHeap, insert, deleteRoot }) => {
       Math.floor(Math.random() * 100)
     );
     const newHeap = [];
-    
+
     randomArr.forEach((num) => {
       newHeap.push(num);
-      heapifyUp(newHeap);
+      heapifyUp(newHeap, isMinHeap);
     });
 
     setHeap(newHeap);
   };
 
-  const heapifyUp = (arr) => {
+  const heapifyUp = (arr, isMin) => {
     let idx = arr.length - 1;
     while (idx > 0) {
-      let parent = Math.floor((idx - 1) / 2);
-      if (arr[parent] > arr[idx]) {
-        [arr[parent], arr[idx]] = [arr[idx], arr[parent]];
-        idx = parent;
+      const parentIdx = Math.floor((idx - 1) / 2);
+      const shouldSwap = isMin
+        ? arr[idx] < arr[parentIdx]
+        : arr[idx] > arr[parentIdx];
+      if (shouldSwap) {
+        [arr[idx], arr[parentIdx]] = [arr[parentIdx], arr[idx]];
+        idx = parentIdx;
       } else break;
     }
   };
