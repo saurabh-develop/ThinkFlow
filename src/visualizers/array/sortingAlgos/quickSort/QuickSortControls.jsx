@@ -27,16 +27,18 @@ const QuickSortControls = ({ onSort, onReset, setSpeed, onSetArray }) => {
           </button>
         </div>
 
-        <div className="flex items-center gap-2 w-full sm:w-auto">
-          <label className="text-sm text-white/70">Speed:</label>
+        {/* Speed */}
+        <div className="flex flex-col items-center text-white text-sm">
+          <label htmlFor="speed" className="mb-1 text-purple-300">
+            Speed
+          </label>
           <input
             type="range"
-            min="100"
-            max="1500"
-            step="100"
-            defaultValue="500"
-            className="w-40 accent-purple-500"
-            onChange={(e) => setSpeed(Number(e.target.value))}
+            min="1"
+            max="250"
+            defaultValue="50"
+            onChange={(e) => setSpeed(500 - Number(e.target.value))}
+            className="w-44 appearance-none h-2 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 accent-purple-500"
           />
         </div>
       </div>

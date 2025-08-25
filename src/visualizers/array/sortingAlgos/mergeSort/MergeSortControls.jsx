@@ -13,13 +13,6 @@ const MergeSortControls = ({ onSort, onReset, setSpeed, onSetArray }) => {
     }
   };
 
-  const handleSpeedChange = (e) => {
-    const val = parseInt(e.target.value);
-    if (!isNaN(val)) {
-      setSpeed(1000 - val);
-    }
-  };
-
   return (
     <div className="max-w-4xl mx-auto bg-white/5 border border-white/10 backdrop-blur rounded-xl px-6 py-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 shadow">
       {/* Custom input */}
@@ -39,16 +32,18 @@ const MergeSortControls = ({ onSort, onReset, setSpeed, onSetArray }) => {
         </button>
       </div>
 
-      {/* Speed slider */}
-      <div className="flex flex-col items-start sm:items-center gap-1 flex-1">
-        <label className="text-sm text-white/80">Speed</label>
+      {/* Speed */}
+      <div className="flex flex-col items-center text-white text-sm">
+        <label htmlFor="speed" className="mb-1 text-purple-300">
+          Speed
+        </label>
         <input
           type="range"
-          min={100}
-          max={900}
-          step={100}
-          onChange={handleSpeedChange}
-          className="w-full sm:w-48 accent-purple-500"
+          min="1"
+          max="250"
+          defaultValue="50"
+          onChange={(e) => setSpeed(500 - Number(e.target.value))}
+          className="w-44 appearance-none h-2 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 accent-purple-500"
         />
       </div>
 

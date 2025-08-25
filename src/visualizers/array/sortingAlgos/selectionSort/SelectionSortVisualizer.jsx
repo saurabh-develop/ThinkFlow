@@ -96,17 +96,9 @@ const SelectionSortVisualizer = () => {
                   setIsSorting(false);
                   setCurrentStep(0);
                 }}
+                isSorting={isSorting}
+                setIsSorting={setIsSorting}
               />
-              <button
-                onClick={() => setIsSorting((prev) => !prev)}
-                className={`${
-                  isSorting
-                    ? "bg-yellow-500 hover:bg-yellow-600"
-                    : "bg-green-500 hover:bg-green-600"
-                } text-white px-4 py-2 rounded-lg shadow backdrop-blur border border-white/10 transition-all`}
-              >
-                {isSorting ? "Pause" : "Resume"}
-              </button>
             </div>
 
             {/* Visuals */}

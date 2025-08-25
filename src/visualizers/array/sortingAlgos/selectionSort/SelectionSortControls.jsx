@@ -6,6 +6,8 @@ const SelectionSortControls = ({
   setSpeed,
   setArray,
   algorithm = "selection",
+  isSorting,
+  setIsSorting,
 }) => {
   const [input, setInput] = useState("");
 
@@ -34,8 +36,11 @@ const SelectionSortControls = ({
     setInput("");
   };
 
+  const baseBtn =
+    "px-4 py-2 rounded-lg font-medium transition-all shadow text-white";
+
   return (
-    <div className="flex flex-wrap justify-center items-center gap-4 mt-6">
+    <div className="w-full bg-white/5 backdrop-blur rounded-xl p-4 flex flex-wrap justify-center items-center gap-4 mt-6 shadow-md">
       <input
         type="text"
         value={input}
@@ -85,6 +90,18 @@ const SelectionSortControls = ({
           className="w-44 appearance-none h-2 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 accent-purple-500"
         />
       </div>
+
+      {/* Pause/Resume */}
+      <button
+        onClick={() => setIsSorting((prev) => !prev)}
+        className={`${baseBtn} ${
+          isSorting
+            ? "bg-yellow-500 hover:bg-yellow-600"
+            : "bg-green-500 hover:bg-green-600"
+        }`}
+      >
+        {isSorting ? "Pause" : "Resume"}
+      </button>
     </div>
   );
 };
