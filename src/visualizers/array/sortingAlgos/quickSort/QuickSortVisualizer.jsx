@@ -57,19 +57,19 @@ const QuickSortVisualizer = () => {
   };
 
   return (
-    <div className="flex flex-col min-h-screen text-white bg-gradient-to-br from-[#0d0d15] to-[#1a1a2e] px-4">
-      <main className="flex-1 py-10 w-full max-w-7xl mx-auto">
+    <div className="flex flex-col min-h-screen text-white bg-gradient-to-br from-[#0d0d15] to-[#1a1a2e] px-4 sm:px-6 lg:px-8">
+      <main className="flex-1 py-8 sm:py-12 w-full max-w-7xl mx-auto">
         {/* Header */}
-        <h1 className="text-3xl sm:text-4xl font-bold mb-10 text-center bg-gradient-to-r from-[#8b3dff] to-[#e84aff] text-transparent bg-clip-text">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 sm:mb-10 text-center bg-gradient-to-r from-[#8b3dff] to-[#e84aff] text-transparent bg-clip-text">
           Quick Sort Visualizer
         </h1>
 
         {/* Tabs */}
-        <div className="flex w-full max-w-xl mx-auto mb-8 rounded-xl overflow-hidden border border-white/10">
+        <div className="flex flex-col sm:flex-row w-full max-w-md mx-auto mb-8 rounded-xl overflow-hidden border border-white/10">
           {["visualization", "explanation"].map((tab) => (
             <button
               key={tab}
-              className={`w-1/2 py-2 font-semibold transition-colors ${
+              className={`flex-1 py-2 font-semibold transition-colors ${
                 activeTab === tab
                   ? "bg-white/10 text-white"
                   : "bg-transparent text-white/50"
@@ -83,6 +83,7 @@ const QuickSortVisualizer = () => {
 
         {activeTab === "visualization" && (
           <>
+            {/* Controls */}
             <QuickSortControls
               onSort={handleSort}
               onReset={handleReset}
@@ -90,18 +91,19 @@ const QuickSortVisualizer = () => {
               onSetArray={handleSetArray}
             />
 
-            <div className="mt-12">
+            {/* Visualization */}
+            <div className="mt-10 sm:mt-12 overflow-x-auto">
               <QuickSortTreeView
                 node={treeSteps.length > 0 ? treeSteps[currentStep] : { array }}
               />
             </div>
 
             {/* Time Complexity */}
-            <div className="mt-16 w-full max-w-4xl mx-auto">
-              <h2 className="text-2xl font-semibold mb-6 bg-gradient-to-r from-[#e84aff] to-[#8b3dff] text-transparent bg-clip-text text-center">
+            <div className="mt-14 sm:mt-16 w-full max-w-5xl mx-auto px-2">
+              <h2 className="text-xl sm:text-2xl font-semibold mb-6 bg-gradient-to-r from-[#e84aff] to-[#8b3dff] text-transparent bg-clip-text text-center">
                 Time Complexity
               </h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-sm text-white/90">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 text-sm sm:text-base text-white/90">
                 {[
                   {
                     op: "Best Case",
@@ -123,7 +125,7 @@ const QuickSortVisualizer = () => {
                     <div className="font-semibold text-purple-300 mb-2 text-base">
                       {op}
                     </div>
-                    <div className="text-base">
+                    <div>
                       <p>
                         <span className="text-purple-400">Best:</span> {best}
                       </p>
@@ -141,7 +143,11 @@ const QuickSortVisualizer = () => {
           </>
         )}
 
-        {activeTab === "explanation" && <QuickSortExplanation />}
+        {activeTab === "explanation" && (
+          <div className="px-2 sm:px-4 md:px-6">
+            <QuickSortExplanation />
+          </div>
+        )}
       </main>
     </div>
   );

@@ -76,13 +76,14 @@ const KnapsackTabulationVisualizer = () => {
 
   return (
     <div className="flex min-h-screen text-white">
-      <main className="flex-1 flex flex-col items-center px-4 sm:px-8 py-10 text-white">
-        <h1 className="text-3xl font-bold mb-6 bg-gradient-to-r from-[#8b3dff] to-[#e84aff] text-transparent bg-clip-text text-center">
-          Dp Tabulation Visualizer
+      <main className="flex-1 flex flex-col items-center px-4 sm:px-6 md:px-8 py-10 text-white w-full">
+        {/* Title */}
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-[#8b3dff] to-[#e84aff] text-transparent bg-clip-text text-center">
+          DP Tabulation Visualizer
         </h1>
 
         {/* Tabs */}
-        <div className="flex w-full max-w-xl mx-auto mb-8 rounded-xl overflow-hidden border border-white/10">
+        <div className="flex w-full max-w-xl mx-auto mb-8 rounded-xl overflow-hidden border border-white/10 text-sm sm:text-base">
           <button
             className={`w-1/2 py-2 font-semibold transition-colors ${
               activeTab === "visualization"
@@ -106,39 +107,58 @@ const KnapsackTabulationVisualizer = () => {
         </div>
 
         {activeTab === "visualization" && (
-          <>
-            <div className="p-4 flex flex-col gap-6 w-full items-center">
-              {/* Controls at the top */}
-              <KnapsackControls
-                isPlaying={isPlaying}
-                onPlayPause={handlePlayPause}
-                onNext={handleNext}
-                onReset={handleReset}
-                onSpeedChange={setDelay}
-                onCustomInput={handleCustomInput}
-              />
+          <div className="p-4 flex flex-col gap-6 w-full max-w-7xl">
+            {/* Controls */}
+            <KnapsackControls
+              isPlaying={isPlaying}
+              onPlayPause={handlePlayPause}
+              onNext={handleNext}
+              onReset={handleReset}
+              onSpeedChange={setDelay}
+              onCustomInput={handleCustomInput}
+            />
 
-              {/*Item Info Section */}
-              <ItemInfoPanel
-                items={items}
-                currentItemIndex={current?.i - 1}
-                capacity={capacity}
-              />
+            {/* Item Info */}
+            <ItemInfoPanel
+              items={items}
+              currentItemIndex={current?.i - 1}
+              capacity={capacity}
+            />
 
-              {/*DP Table + Code Viewer */}
-              <div className="w-full flex flex-col lg:flex-row gap-6 justify-center items-start">
+            {/* DP Table + Code Viewer */}
+            <div className="w-full flex flex-col lg:flex-row gap-6 justify-center items-stretch">
+              <div className="flex-1 overflow-x-auto">
                 <DPTable
                   table={current.table}
                   highlight={{ i: current.i, w: current.w }}
                   items={items}
                 />
+              </div>
+              <div className="flex-1 overflow-x-auto">
                 <CodeViewer activeLine={current.codeLine} />
               </div>
             </div>
-          </>
+            <div className="mt-6 border border-white/10 bg-white/5 backdrop-blur rounded-xl px-4 py-4 text-center shadow hover:shadow-purple-400 transition-all">
+              <p>
+                ⏱️ <strong>Time Complexity:</strong>
+              </p>
+              <ul className="list-disc list-inside leading-relaxed">
+                <li>
+                  <b>Time Complexity:</b> T(n, W) = n x W
+                </li>
+                <li>
+                  <b>Space Complexity:</b> O(n x W)
+                </li>
+              </ul>
+            </div>
+          </div>
         )}
 
-        {activeTab === "explanation" && <TabulationExplanation />}
+        {activeTab === "explanation" && (
+          <div className="w-full max-w-4xl px-2 sm:px-4">
+            <TabulationExplanation />
+          </div>
+        )}
       </main>
     </div>
   );

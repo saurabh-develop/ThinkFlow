@@ -13,15 +13,17 @@ const BFSControls = ({
   nodeIds,
 }) => {
   return (
-    <div className="w-full max-w-3xl mx-auto mt-6 bg-white/5 backdrop-blur-md p-6 rounded-xl shadow-md text-white">
-      <div className="flex flex-wrap items-center justify-between gap-4">
+    <div className="w-full max-w-3xl mx-auto mt-6 bg-white/5 backdrop-blur-md p-4 sm:p-6 rounded-xl shadow-md text-white">
+      <div className="flex flex-col sm:flex-row flex-wrap items-center justify-between gap-4">
         {/* Start Node */}
-        <div className="flex items-center gap-2">
-          <label className="text-sm text-white/70">Start Node:</label>
+        <div className="flex items-center gap-2 w-full sm:w-auto">
+          <label className="text-sm text-white/70 whitespace-nowrap">
+            Start Node:
+          </label>
           <select
             value={startNode}
             onChange={(e) => setStartNode(e.target.value)}
-            className="bg-white/10 text-white px-3 py-2 rounded-md text-sm border border-white/20"
+            className="flex-1 sm:flex-none bg-white/10 text-white px-3 py-2 rounded-md text-sm border border-white/20 min-w-[100px]"
           >
             {nodeIds.map((id) => (
               <option key={id} value={id}>
@@ -31,9 +33,11 @@ const BFSControls = ({
           </select>
         </div>
 
-        {/* Speed Control */}
-        <div className="flex items-center gap-2">
-          <label className="text-sm text-white/70">Speed:</label>
+        {/* Speed */}
+        <div className="flex flex-col items-center text-white text-sm">
+          <label htmlFor="speed" className="mb-1 text-purple-300">
+            Speed
+          </label>
           <input
             type="range"
             min="1"
@@ -45,17 +49,17 @@ const BFSControls = ({
         </div>
 
         {/* Buttons */}
-        <div className="flex gap-3 flex-wrap">
+        <div className="flex flex-wrap gap-3 w-full sm:w-auto justify-center sm:justify-end">
           <button
             onClick={onRun}
-            className="px-6 py-2 rounded-lg bg-purple-600 hover:bg-purple-700 transition-all shadow"
+            className="px-5 py-2 rounded-lg bg-purple-600 hover:bg-purple-700 transition-all shadow text-sm sm:text-base"
           >
             Run
           </button>
           {!paused ? (
             <button
               onClick={() => setPaused((p) => !p)}
-              className="px-6 py-2 rounded-lg bg-yellow-500 hover:bg-yellow-600 text-black transition-all shadow"
+              className="px-5 py-2 rounded-lg bg-yellow-500 hover:bg-yellow-600 text-black transition-all shadow text-sm sm:text-base"
               disabled={!isRunning}
             >
               Pause
@@ -63,15 +67,14 @@ const BFSControls = ({
           ) : (
             <button
               onClick={() => setPaused(false)}
-              className="px-6 py-2 rounded-lg bg-purple-600 hover:bg-purple-700 transition-all shadow"
+              className="px-5 py-2 rounded-lg bg-purple-600 hover:bg-purple-700 transition-all shadow text-sm sm:text-base"
             >
               Resume
             </button>
           )}
-
           <button
             onClick={onReset}
-            className="px-6 py-2 rounded-lg bg-gray-700 hover:bg-gray-800 transition-all shadow"
+            className="px-5 py-2 rounded-lg bg-gray-700 hover:bg-gray-800 transition-all shadow text-sm sm:text-base"
           >
             Reset
           </button>

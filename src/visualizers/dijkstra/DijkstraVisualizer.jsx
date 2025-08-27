@@ -187,7 +187,7 @@ const DijkstraVisualizer = () => {
       return;
     }
 
-    if (isRunning) return; 
+    if (isRunning) return;
 
     const steps = dijkstraTraversal(getAdjList(), startNode);
     setDijkstraSteps(steps);
@@ -251,8 +251,9 @@ const DijkstraVisualizer = () => {
                 nodeIds={nodes.map((n) => n.id)}
               />
 
-              <div className="grid grid-cols-12 gap-6 mt-10">
-                <div className="col-span-5 h-[70vh] bg-[#1e1e2f] rounded-xl border border-white/10 overflow-hidden">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 mt-10">
+                {/* Graph */}
+                <div className="col-span-1 lg:col-span-5 h-[50vh] lg:h-[70vh] bg-[#1e1e2f] rounded-xl border border-white/10 overflow-hidden">
                   <ReactFlow
                     nodes={nodes}
                     edges={edges}
@@ -265,7 +266,8 @@ const DijkstraVisualizer = () => {
                   </ReactFlow>
                 </div>
 
-                <div className="col-span-7 grid grid-cols-2 gap-4 max-h-[70vh]">
+                {/* Table + Code */}
+                <div className="col-span-1 lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-4 max-h-[70vh]">
                   <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-4 shadow-lg overflow-y-auto">
                     <DijkstraTable
                       steps={dijkstraSteps}
@@ -273,11 +275,12 @@ const DijkstraVisualizer = () => {
                       finalStep={finalStep}
                     />
                   </div>
-                  <div className=" shadow-lg overflow-y-auto">
+                  <div className="bg-white/5 backdrop-blur-md border border-white/20 rounded-xl shadow-lg overflow-y-auto p-4">
                     <DijkstraCodeViewer />
                   </div>
                 </div>
               </div>
+
               <div className="mt-16 w-full max-w-4xl mx-auto">
                 <h2 className="text-2xl font-semibold mb-6 bg-gradient-to-r from-[#8b3dff] to-[#e84aff] text-transparent bg-clip-text text-center">
                   Time Complexity
@@ -297,6 +300,7 @@ const DijkstraVisualizer = () => {
 
           {activeTab === "explanation" && <DijkstraExplanation />}
         </main>
+        
       </div>
     </ReactFlowProvider>
   );

@@ -23,31 +23,24 @@ const codeLines = [
 const BFSCodeViewer = () => {
   const { currentStepIndex, bfsSteps } = useGraphStore();
 
-  const lineMap = {
-    0: 0,
-    1: 1,
-    2: 2,
-    3: 3,
-    4: 4,
-    5: 5,
-    6: 6,
-    7: 7,
-    8: 8,
-    9: 9,
-  };
-
   const current = bfsSteps[currentStepIndex]?.currentLine ?? -1;
 
   return (
-    <div className="w-full sm:w-1/2 p-4 bg-white/5 rounded-xl border border-white/10 text-sm font-mono">
+    <div className="w-full sm:w-1/2 p-3 sm:p-4 bg-white/5 rounded-xl border border-white/10 font-mono overflow-x-auto">
       {codeLines.map((line, idx) => (
         <motion.pre
           key={idx}
-          className={`transition-all px-2 py-1 rounded ${
-            idx === current ? "bg-purple-700 text-white" : "text-white/70"
-          }`}
+          className={`transition-all px-2 py-1 rounded text-xs sm:text-sm md:text-base whitespace-pre`}
         >
-          {line}
+          <span
+            className={`block ${
+              idx === current
+                ? "bg-purple-700 text-white rounded px-1"
+                : "text-white/70"
+            }`}
+          >
+            {line}
+          </span>
         </motion.pre>
       ))}
     </div>
