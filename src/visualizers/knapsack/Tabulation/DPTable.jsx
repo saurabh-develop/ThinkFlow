@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 const DPTable = ({ table, highlight, items }) => {
   const capacity = table[0].length - 1;

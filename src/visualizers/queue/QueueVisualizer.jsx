@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import QueueBox from "./QueueBox";
 import QueueControls from "./QueueControls";
 import QueueExplanation from "./QueueExplanation";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 
 const QueueVisualizer = () => {
   const [queue, setQueue] = useState([]);

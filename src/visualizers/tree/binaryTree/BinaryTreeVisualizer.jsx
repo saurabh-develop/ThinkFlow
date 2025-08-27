@@ -7,7 +7,7 @@ import ReactFlow, {
   Position,
 } from "reactflow";
 import "reactflow/dist/style.css";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import BinaryTreeControls from "./BinaryTreeControls";
 import BinaryTreeAnalysis from "./BinaryTreeAnalysis";
 import { BinaryTree } from "./BinaryTreeLogic";

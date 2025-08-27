@@ -7,7 +7,7 @@ import ReactFlow, {
   Position,
 } from "reactflow";
 import "reactflow/dist/style.css";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import AVLControls from "./AVLControls";
 import AVLTree from "./AVLTree";
 import AVLExplanation from "./AVLExplanation";

@@ -1,6 +1,6 @@
 import React, { useRef, useLayoutEffect, useState } from "react";
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 const NODE_WIDTH = 50;
 const NODE_HEIGHT = 28;

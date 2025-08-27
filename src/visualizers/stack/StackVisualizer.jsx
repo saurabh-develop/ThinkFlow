@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import StackControls from "./StackControls";
 import StackBox from "./StackBox";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion } from "motion/react";
 import CodeImplementation from "./CodeImplementation";
 
 const StackVisualizer = () => {

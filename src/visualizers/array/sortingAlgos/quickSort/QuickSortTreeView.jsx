@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 const QuickSortTreeView = ({ node, depth = 0 }) => {
   if (!node || !node.array) return null;

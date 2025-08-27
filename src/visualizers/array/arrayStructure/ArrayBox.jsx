@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 const ArrayBox = ({ value, index, highlight, pathIndex }) => {
   return (

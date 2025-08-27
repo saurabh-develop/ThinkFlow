@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 const boxClass =
   "bg-white/10 border border-white/20 text-white text-sm font-mono rounded-md px-3 py-2 min-w-[40px] text-center shadow transition-all duration-500";
