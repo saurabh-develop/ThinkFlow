@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "motion/react";
-import useGraphStore from "./useGraphStore";
+import useGraphStore from "./useGraphStore.js";
 
 const codeLines = [
   "function bfs(graph, start) {",

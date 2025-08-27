@@ -1,6 +1,6 @@
 import React from "react";
-import useDFSStore from "./useDFSStore";
-import { dfsTraversal } from "./dfsTraversal";
+import useDFSStore from "./useDFSStore.js";
+import { dfsTraversal } from "./dfsTraversal.js";
 
 const DFSControls = ({ nodeIds, edgeList }) => {
   const {

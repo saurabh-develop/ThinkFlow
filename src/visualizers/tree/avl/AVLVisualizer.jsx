@@ -8,10 +8,10 @@ import ReactFlow, {
 } from "reactflow";
 import "reactflow/dist/style.css";
 import { motion } from "motion/react";
-import AVLControls from "./AVLControls";
-import AVLTree from "./AVLTree";
-import AVLExplanation from "./AVLExplanation";
-import AVLAnalysis from "./AVLAnalysis";
+import AVLControls from "./AVLControls.jsx";
+import AVLTree from "./AVLTree.js";
+import AVLExplanation from "./AVLExplanation.jsx";
+import AVLAnalysis from "./AVLAnalysis.jsx";
 
 const AnimatedNode = ({ data }) => {
   return (

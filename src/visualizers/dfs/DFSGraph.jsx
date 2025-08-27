@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import ReactFlow, { Controls, useNodesState, useEdgesState } from "reactflow";
 import "reactflow/dist/style.css";
-import useDFSStore from "./useDFSStore";
+import useDFSStore from "./useDFSStore.js";
 
 const baseNodeStyle = {
   width: 50,

@@ -8,10 +8,10 @@ import ReactFlow, {
 } from "reactflow";
 import "reactflow/dist/style.css";
 import { motion } from "motion/react";
-import BinaryTreeControls from "./BinaryTreeControls";
-import BinaryTreeAnalysis from "./BinaryTreeAnalysis";
-import { BinaryTree } from "./BinaryTreeLogic";
-import BinaryTreeExplanation from "./BinaryTreeExplanation";
+import BinaryTreeControls from "./BinaryTreeControls.jsx";
+import BinaryTreeAnalysis from "./BinaryTreeAnalysis.jsx";
+import { BinaryTree } from "./BinaryTreeLogic.js";
+import BinaryTreeExplanation from "./BinaryTreeExplanation.jsx";
 
 const AnimatedNode = ({ data }) => (
   <motion.div

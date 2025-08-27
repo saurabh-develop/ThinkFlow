@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/Button.jsx";
+import { Input } from "@/components/ui/input.jsx";
 
 const HeapControls = ({ heap, setHeap, insert, deleteRoot, isMinHeap }) => {
   const [value, setValue] = useState("");

@@ -1,5 +1,5 @@
 import React from "react";
-import useDijkstraStore from "./useDijkstraStore";
+import useDijkstraStore from "./useDijkstraStore.js";
 
 const DijkstraTable = ({ steps, currentStepIndex }) => {
   const finalStep = useDijkstraStore((state) => state.finalStep);

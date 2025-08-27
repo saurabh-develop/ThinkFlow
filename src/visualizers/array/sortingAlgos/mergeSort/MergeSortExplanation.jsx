@@ -1,4 +1,4 @@
-import ExplanationSection from "@/visualizers/ExplanationSection";
+import ExplanationSection from "@/visualizers/ExplanationSection.jsx";
 import React from "react";
 
 const mergeSortCodeSnippets = {

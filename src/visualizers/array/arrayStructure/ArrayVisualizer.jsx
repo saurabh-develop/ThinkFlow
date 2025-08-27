@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import ArrayControls from "./ArrayControls";
-import ArrayBox from "./ArrayBox";
-import ArrayExplanation from "./ArrayExplanation";
+import ArrayControls from "./ArrayControls.jsx";
+import ArrayBox from "./ArrayBox.jsx";
+import ArrayExplanation from "./ArrayExplanation.jsx";
 
 const ArrayVisualizer = () => {
   const [array, setArray] = useState([5, 3, 8, 1]);

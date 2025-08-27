@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
-import SelectionSortControls from "./SelectionSortControls";
-import SelectionSortCode from "./SelectionSortCode";
-import SelectionSortExplanation from "./SelectionSortExplanation";
-import { selectionSortSteps } from "@/visualizers/sortingAlgorithms";
+import SelectionSortControls from "./SelectionSortControls.jsx";
+import SelectionSortCode from "./SelectionSortCode.jsx";
+import SelectionSortExplanation from "./SelectionSortExplanation.jsx";
+import { selectionSortSteps } from "@/visualizers/sortingAlgorithms.js";
 
 const SelectionSortVisualizer = () => {
   const [array, setArray] = useState([]);

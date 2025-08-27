@@ -1,8 +1,8 @@
 import React, { useEffect, useState, useRef } from "react";
-import InsertionSortControls from "./InsertionSortControls";
-import InsertionSortCode from "./InsertionSortCode";
-import InsertionSortExplanation from "./InsertionSortExplanation";
-import { insertionSortSteps } from "@/visualizers/sortingAlgorithms";
+import InsertionSortControls from "./InsertionSortControls.jsx";
+import InsertionSortCode from "./InsertionSortCode.jsx";
+import InsertionSortExplanation from "./InsertionSortExplanation.jsx";
+import { insertionSortSteps } from "@/visualizers/sortingAlgorithms.js";
 
 const InsertionSortVisualizer = () => {
   const [array, setArray] = useState([]);
@@ -98,7 +98,6 @@ const InsertionSortVisualizer = () => {
                 isSorting={isSorting}
                 setIsSorting={setIsSorting}
               />
-              
             </div>
 
             {/* Visualizer */}

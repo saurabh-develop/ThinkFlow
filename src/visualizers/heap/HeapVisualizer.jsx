@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import HeapControls from "./HeapControls";
-import HeapNode from "./HeapNode";
-import HeapExplanation from "./HeapExplanation";
+import HeapControls from "./HeapControls.jsx";
+import HeapNode from "./HeapNode.jsx";
+import HeapExplanation from "./HeapExplanation.jsx";
 
 const HeapVisualizer = () => {
   const [heap, setHeap] = useState([]);

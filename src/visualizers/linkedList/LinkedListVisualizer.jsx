@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
-import { motion } from "framer-motion";
-import LinkedListControls from "./LinkedListControls";
+import { motion } from "motion/react";
+import LinkedListControls from "./LinkedListControls.jsx";
 import {
   SinglyLinkedList,
   DoublyLinkedList,

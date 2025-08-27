@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "motion/react";
-import useDijkstraStore from "./useDijkstraStore";
+import useDijkstraStore from "./useDijkstraStore.js";
 
 const codeLines = [
   "function dijkstra(graph, start) {",

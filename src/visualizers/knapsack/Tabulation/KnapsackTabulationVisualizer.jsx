@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
-import ItemInfoPanel from "./ItemInfoPanel";
-import DPTable from "./DPTable";
-import KnapsackControls from "./KnapsackControls";
-import useTabulationSteps from "./useTabulationSteps";
-import CodeViewer from "./CodeViewer";
-import TabulationExplanation from "./TabulationExplanation";
+import ItemInfoPanel from "./ItemInfoPanel.jsx";
+import DPTable from "./DPTable.jsx";
+import KnapsackControls from "./KnapsackControls.jsx";
+import useTabulationSteps from "./useTabulationSteps.js";
+import CodeViewer from "./CodeViewer.jsx";
+import TabulationExplanation from "./TabulationExplanation.jsx";
 
 const DEFAULT_ITEMS = [
   { weight: 1, value: 1 },

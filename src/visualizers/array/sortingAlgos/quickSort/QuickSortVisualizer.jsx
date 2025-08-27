@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
-import QuickSortControls from "./QuickSortControls";
-import QuickSortTreeView from "./QuickSortTreeView";
-import QuickSortExplanation from "./QuickSortExplanation";
-import { generateQuickTreeSteps } from "./generateQuickTree";
+import QuickSortControls from "./QuickSortControls.jsx";
+import QuickSortTreeView from "./QuickSortTreeView.jsx";
+import QuickSortExplanation from "./QuickSortExplanation.jsx";
+import { generateQuickTreeSteps } from "./generateQuickTree.js";
 
 const QuickSortVisualizer = () => {
   const [array, setArray] = useState([]);

@@ -1,5 +1,5 @@
 import React from "react";
-import ExplanationSection from "../ExplanationSection";
+import ExplanationSection from "../ExplanationSection.jsx";
 
 const codeSnippets = {
   javascript: `// JavaScript - BFS using Queue

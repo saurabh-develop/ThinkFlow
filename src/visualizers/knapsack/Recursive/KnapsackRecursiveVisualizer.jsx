@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import useRecursiveSteps from "./useRecursiveSteps";
-import RecursiveTreeCanvas from "./RecursiveTreeCanvas";
-import RecursiveControls from "./RecursiveControls";
-import KnapsackInfoPanel from "./KnapsackInfoPanel";
-import RecursionExplanation from "./RecursionExplanation";
+import useRecursiveSteps from "./useRecursiveSteps.js";
+import RecursiveTreeCanvas from "./RecursiveTreeCanvas.jsx";
+import RecursiveControls from "./RecursiveControls.jsx";
+import KnapsackInfoPanel from "./KnapsackInfoPanel.jsx";
+import RecursionExplanation from "./RecursionExplanation.jsx";
 
 const KnapsackRecursiveVisualizer = () => {
   const [weights, setWeights] = useState([1, 3, 4, 5]);

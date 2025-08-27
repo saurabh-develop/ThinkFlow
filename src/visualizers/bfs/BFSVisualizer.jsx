@@ -6,11 +6,11 @@ import ReactFlow, {
   ReactFlowProvider,
 } from "reactflow";
 import "reactflow/dist/style.css";
-import BFSControls from "./BFSControls";
-import BFSExplanation from "./BFSExplanation";
-import { bfsTraversal } from "./bfsLogic";
-import BFSCodeViewer from "./BFSCodeViewer";
-import useGraphStore from "./useGraphStore";
+import BFSControls from "./BFSControls.jsx";
+import BFSExplanation from "./BFSExplanation.jsx";
+import { bfsTraversal } from "./bfsLogic.js";
+import BFSCodeViewer from "./BFSCodeViewer.jsx";
+import useGraphStore from "./useGraphStore.js";
 
 const baseNodeStyle = {
   width: 50,

@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
-import QueueBox from "./QueueBox";
-import QueueControls from "./QueueControls";
-import QueueExplanation from "./QueueExplanation";
+import QueueBox from "./QueueBox.jsx";
+import QueueControls from "./QueueControls.jsx";
+import QueueExplanation from "./QueueExplanation.jsx";
 import { motion, AnimatePresence } from "motion/react";
 
 const QueueVisualizer = () => {

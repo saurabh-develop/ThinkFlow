@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "motion/react";
-import useDFSStore from "./useDFSStore";
+import useDFSStore from "./useDFSStore.js";
 
 const codeLines = [
   "function dfs(node, visited) {",

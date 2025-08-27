@@ -7,12 +7,12 @@ import ReactFlow, {
 } from "reactflow";
 import "reactflow/dist/style.css";
 
-import useDFSStore from "./useDFSStore";
-import { dfsTraversal } from "./dfsTraversal";
-import DFSControls from "./DFSControls";
-import DFSCodeViewer from "./DFSCodeViewer";
-import DFSExplanation from "./DFSExplanation";
-import DFSStackDisplay from "./DFSStackDisplay";
+import useDFSStore from "./useDFSStore.js";
+import { dfsTraversal } from "./dfsTraversal.js";
+import DFSControls from "./DFSControls.jsx";
+import DFSCodeViewer from "./DFSCodeViewer.jsx";
+import DFSExplanation from "./DFSExplanation.jsx";
+import DFSStackDisplay from "./DFSStackDisplay.jsx";
 
 const baseNodeStyle = {
   width: 50,

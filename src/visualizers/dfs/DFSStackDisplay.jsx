@@ -1,5 +1,5 @@
 import React from "react";
-import useDFSStore from "./useDFSStore";
+import useDFSStore from "./useDFSStore.js";
 
 const DFSStackDisplay = () => {
   const { dfsSteps, currentStepIndex } = useDFSStore();

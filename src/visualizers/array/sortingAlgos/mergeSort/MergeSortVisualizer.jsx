@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
-import MergeSortControls from "./MergeSortControls";
-import MergeSortTreeView from "./MergeSortTreeView";
-import MergeSortExplanation from "./MergeSortExplanation";
-import { generateMergeTreeSteps } from "./generateMergeTree";
+import MergeSortControls from "./MergeSortControls.jsx";
+import MergeSortTreeView from "./MergeSortTreeView.jsx";
+import MergeSortExplanation from "./MergeSortExplanation.jsx";
+import { generateMergeTreeSteps } from "./generateMergeTree.js";
 
 const MergeSortVisualizer = () => {
   const [array, setArray] = useState([]);

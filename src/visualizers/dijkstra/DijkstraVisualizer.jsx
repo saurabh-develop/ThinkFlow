@@ -6,12 +6,12 @@ import ReactFlow, {
   ReactFlowProvider,
 } from "reactflow";
 import "reactflow/dist/style.css";
-import DijkstraControls from "./DijkstraControls";
-import DijkstraCodeViewer from "./DijkstraCodeViewer";
-import DijkstraExplanation from "./DijkstraExplanation";
-import DijkstraTable from "./DijkstraTable";
-import useDijkstraStore from "./useDijkstraStore";
-import { dijkstraTraversal } from "./dijkstraLogic";
+import DijkstraControls from "./DijkstraControls.jsx";
+import DijkstraCodeViewer from "./DijkstraCodeViewer.jsx";
+import DijkstraExplanation from "./DijkstraExplanation.jsx";
+import DijkstraTable from "./DijkstraTable.jsx";
+import useDijkstraStore from "./useDijkstraStore.js";
+import { dijkstraTraversal } from "./dijkstraLogic.js";
 
 const baseNodeStyle = {
   width: 25,
@@ -300,7 +300,6 @@ const DijkstraVisualizer = () => {
 
           {activeTab === "explanation" && <DijkstraExplanation />}
         </main>
-        
       </div>
     </ReactFlowProvider>
   );

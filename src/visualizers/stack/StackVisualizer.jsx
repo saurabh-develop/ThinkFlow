@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import StackControls from "./StackControls";
-import StackBox from "./StackBox";
+import StackControls from "./StackControls.jsx";
+import StackBox from "./StackBox.jsx";
 import { AnimatePresence, motion } from "motion/react";
-import CodeImplementation from "./CodeImplementation";
+import CodeImplementation from "./CodeImplementation.jsx";
 
 const StackVisualizer = () => {
   const [stack, setStack] = useState([]);
